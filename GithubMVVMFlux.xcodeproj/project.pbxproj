@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -101,7 +101,6 @@
 				15E3DA4E14F8CD89423CC611 /* Pods-GithubMVVMFluxTests.debug.xcconfig */,
 				3EE3900F9224E3BF46E88334 /* Pods-GithubMVVMFluxTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -181,6 +180,7 @@
 				DFC9E9DD235D505000F9EEDA /* Frameworks */,
 				DFC9E9DE235D505000F9EEDA /* Resources */,
 				B1EE63E5D60EB94C9B8E7B90 /* [CP] Embed Pods Frameworks */,
+				DFC9EA13235D5B2000F9EEDA /* Linter */,
 			);
 			buildRules = (
 			);
@@ -400,6 +400,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GithubMVVMFlux-GithubMVVMFluxUITests/Pods-GithubMVVMFlux-GithubMVVMFluxUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		DFC9EA13235D5B2000F9EEDA /* Linter */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Linter;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n${PODS_ROOT}/SwiftLint/swiftlint autocorrect\n${PODS_ROOT}/SwiftLint/swiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
