@@ -10,6 +10,7 @@ target 'GithubMVVMFlux' do
   pod 'RxCocoa'
   pod 'APIKit'
   pod 'SwiftLint'
+  pod 'SwiftGen'
   pod 'CocoaDebug', :configurations => ['Debug']
 
   target 'GithubMVVMFluxTests' do

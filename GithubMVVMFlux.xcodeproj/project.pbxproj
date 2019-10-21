@@ -14,10 +14,15 @@
 		DFC9E9E6235D505000F9EEDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */; };
 		DFC9E9E8235D505000F9EEDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E7235D505000F9EEDA /* ViewController.swift */; };
 		DFC9E9EB235D505000F9EEDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC9E9E9235D505000F9EEDA /* Main.storyboard */; };
-		DFC9E9ED235D505100F9EEDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFC9E9EC235D505100F9EEDA /* Assets.xcassets */; };
 		DFC9E9F0235D505100F9EEDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC9E9EE235D505100F9EEDA /* LaunchScreen.storyboard */; };
 		DFC9E9FB235D505100F9EEDA /* GithubMVVMFluxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9FA235D505100F9EEDA /* GithubMVVMFluxTests.swift */; };
 		DFC9EA06235D505100F9EEDA /* GithubMVVMFluxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA05235D505100F9EEDA /* GithubMVVMFluxUITests.swift */; };
+		DFC9EA19235DFADB00F9EEDA /* colors.xml in Resources */ = {isa = PBXBuildFile; fileRef = DFC9EA17235DFADB00F9EEDA /* colors.xml */; };
+		DFC9EA1C235DFAE600F9EEDA /* StringsGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA1B235DFAE600F9EEDA /* StringsGen.swift */; };
+		DFC9EA1F235DFBEB00F9EEDA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFC9EA1E235DFBEB00F9EEDA /* Localizable.strings */; };
+		DFC9EA21235DFC4000F9EEDA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA20235DFC4000F9EEDA /* Colors.swift */; };
+		DFC9EA24235E03D900F9EEDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFC9EA23235E03D900F9EEDA /* Assets.xcassets */; };
+		DFC9EA26235E04B600F9EEDA /* AssetsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA25235E04B600F9EEDA /* AssetsImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +56,6 @@
 		DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DFC9E9E7235D505000F9EEDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DFC9E9EA235D505000F9EEDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DFC9E9EC235D505100F9EEDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFC9E9EF235D505100F9EEDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFC9E9F1235D505100F9EEDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFC9E9F6235D505100F9EEDA /* GithubMVVMFluxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubMVVMFluxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +64,12 @@
 		DFC9EA01235D505100F9EEDA /* GithubMVVMFluxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubMVVMFluxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC9EA05235D505100F9EEDA /* GithubMVVMFluxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubMVVMFluxUITests.swift; sourceTree = "<group>"; };
 		DFC9EA07235D505100F9EEDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFC9EA17235DFADB00F9EEDA /* colors.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = colors.xml; sourceTree = "<group>"; };
+		DFC9EA1B235DFAE600F9EEDA /* StringsGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsGen.swift; sourceTree = "<group>"; };
+		DFC9EA1E235DFBEB00F9EEDA /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		DFC9EA20235DFC4000F9EEDA /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		DFC9EA23235E03D900F9EEDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFC9EA25235E04B600F9EEDA /* AssetsImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsImages.swift; sourceTree = "<group>"; };
 		F8E5696FD786588640123A97 /* Pods_GithubMVVMFlux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubMVVMFlux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,11 +139,12 @@
 		DFC9E9E2235D505000F9EEDA /* GithubMVVMFlux */ = {
 			isa = PBXGroup;
 			children = (
+				DFC9EA1A235DFAE600F9EEDA /* Sources */,
+				DFC9EA14235DFADB00F9EEDA /* Resources */,
 				DFC9E9E3235D505000F9EEDA /* AppDelegate.swift */,
 				DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */,
 				DFC9E9E7235D505000F9EEDA /* ViewController.swift */,
 				DFC9E9E9235D505000F9EEDA /* Main.storyboard */,
-				DFC9E9EC235D505100F9EEDA /* Assets.xcassets */,
 				DFC9E9EE235D505100F9EEDA /* LaunchScreen.storyboard */,
 				DFC9E9F1235D505100F9EEDA /* Info.plist */,
 			);
@@ -156,6 +167,50 @@
 				DFC9EA07235D505100F9EEDA /* Info.plist */,
 			);
 			path = GithubMVVMFluxUITests;
+			sourceTree = "<group>";
+		};
+		DFC9EA14235DFADB00F9EEDA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DFC9EA22235E03AB00F9EEDA /* Images */,
+				DFC9EA1D235DFB2E00F9EEDA /* Strings */,
+				DFC9EA16235DFADB00F9EEDA /* Colors */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DFC9EA16235DFADB00F9EEDA /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				DFC9EA17235DFADB00F9EEDA /* colors.xml */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		DFC9EA1A235DFAE600F9EEDA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DFC9EA25235E04B600F9EEDA /* AssetsImages.swift */,
+				DFC9EA20235DFC4000F9EEDA /* Colors.swift */,
+				DFC9EA1B235DFAE600F9EEDA /* StringsGen.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DFC9EA1D235DFB2E00F9EEDA /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				DFC9EA1E235DFBEB00F9EEDA /* Localizable.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		DFC9EA22235E03AB00F9EEDA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DFC9EA23235E03D900F9EEDA /* Assets.xcassets */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		F5DA8F04C30DB7AB98A33BA2 /* Frameworks */ = {
@@ -278,9 +333,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFC9EA1F235DFBEB00F9EEDA /* Localizable.strings in Resources */,
+				DFC9EA19235DFADB00F9EEDA /* colors.xml in Resources */,
 				DFC9E9F0235D505100F9EEDA /* LaunchScreen.storyboard in Resources */,
-				DFC9E9ED235D505100F9EEDA /* Assets.xcassets in Resources */,
 				DFC9E9EB235D505000F9EEDA /* Main.storyboard in Resources */,
+				DFC9EA24235E03D900F9EEDA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,8 +484,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFC9E9E8235D505000F9EEDA /* ViewController.swift in Sources */,
+				DFC9EA21235DFC4000F9EEDA /* Colors.swift in Sources */,
 				DFC9E9E4235D505000F9EEDA /* AppDelegate.swift in Sources */,
 				DFC9E9E6235D505000F9EEDA /* SceneDelegate.swift in Sources */,
+				DFC9EA26235E04B600F9EEDA /* AssetsImages.swift in Sources */,
+				DFC9EA1C235DFAE600F9EEDA /* StringsGen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

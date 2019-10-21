@@ -16,16 +16,26 @@ or alternatively using `brew cask install fastlane`
 
 # Available Actions
 ## iOS
-### ios custom_lane
-```
-fastlane ios custom_lane
-```
-Description of what the lane does
 ### ios test
 ```
 fastlane ios test
 ```
 Run Test
+### ios lint_autocorrect
+```
+fastlane ios lint_autocorrect
+```
+Run lint autocorrect
+### ios lint
+```
+fastlane ios lint
+```
+Run linting
+### ios swiftgen
+```
+fastlane ios swiftgen
+```
+Update Swiftgen
 
 ----
 
