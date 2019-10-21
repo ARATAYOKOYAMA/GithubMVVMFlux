@@ -1,0 +1,38 @@
+PODS:
+  - APIKit (5.0.0)
+  - CocoaDebug (1.0.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - SwiftLint (0.35.0)
+
+DEPENDENCIES:
+  - APIKit
+  - CocoaDebug
+  - RxCocoa
+  - RxSwift
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - APIKit
+    - CocoaDebug
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  APIKit: b27d79b022733b2f50e7a092e67c4cb9ea30f968
+  CocoaDebug: 2fe3f74e81c4132eb4e1a05b3136622a95312e00
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SwiftLint: 5553187048b900c91aa03552807681bb6b027846
+
+PODFILE CHECKSUM: 33421f766073e9deb01931d4df643004c23d0a7c
+
+COCOAPODS: 1.8.3
