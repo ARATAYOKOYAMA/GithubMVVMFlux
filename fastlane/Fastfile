@@ -24,6 +24,7 @@ platform :ios do
   	lane :lint_autocorrect do
 	    swiftlint(
 	      mode: :autocorrect,
+	      format: true,
 	      executable: './Pods/SwiftLint/swiftlint',
 	      config_file: '.swiftlint.yml',
 	    )

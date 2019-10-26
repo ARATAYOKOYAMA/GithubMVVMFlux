@@ -7,12 +7,28 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
 
+    @IBOutlet private weak var testButton: UIButton!
+    private let viewModel = TestViewModel()
+
+    private let disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        // MARK: output
+        testButton.rx.tap
+            .bind(to: viewModel.testButtonDidTap)
+            .disposed(by: disposeBag)
+
+        // MARK: inpuut
+        viewModel.repositories.subscribe(onNext: {
+            print($0)
+        })
     }
 
 }

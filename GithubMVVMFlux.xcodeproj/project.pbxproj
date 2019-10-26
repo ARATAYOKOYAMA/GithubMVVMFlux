@@ -23,6 +23,18 @@
 		DFC9EA21235DFC4000F9EEDA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA20235DFC4000F9EEDA /* Colors.swift */; };
 		DFC9EA24235E03D900F9EEDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFC9EA23235E03D900F9EEDA /* Assets.xcassets */; };
 		DFC9EA26235E04B600F9EEDA /* AssetsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA25235E04B600F9EEDA /* AssetsImages.swift */; };
+		DFC9EA2E2361735E00F9EEDA /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA2A2361735E00F9EEDA /* Dispatcher.swift */; };
+		DFC9EA33236173C600F9EEDA /* DecodableDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA32236173C600F9EEDA /* DecodableDataParser.swift */; };
+		DFC9EA35236173F500F9EEDA /* GitHubAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA34236173F500F9EEDA /* GitHubAPIRequest.swift */; };
+		DFC9EA37236174CE00F9EEDA /* FetchRepositoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA36236174CE00F9EEDA /* FetchRepositoryRequest.swift */; };
+		DFC9EA392361755E00F9EEDA /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA382361755E00F9EEDA /* Session.swift */; };
+		DFC9EA3C2361757900F9EEDA /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA3B2361757900F9EEDA /* Repository.swift */; };
+		DFC9EA3E236175F500F9EEDA /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA3D236175F500F9EEDA /* TestViewModel.swift */; };
+		DFC9EA432361784600F9EEDA /* TestActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA422361784600F9EEDA /* TestActionCreator.swift */; };
+		DFC9EA45236178F800F9EEDA /* TestStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA44236178F800F9EEDA /* TestStore.swift */; };
+		DFC9EA4723647CCC00F9EEDA /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA4623647CCC00F9EEDA /* Action.swift */; };
+		DFC9EA4923647E4300F9EEDA /* TestAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA4823647E4300F9EEDA /* TestAction.swift */; };
+		DFC9EA4D2364867E00F9EEDA /* TestViewFluxTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA4C2364867E00F9EEDA /* TestViewFluxTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +82,18 @@
 		DFC9EA20235DFC4000F9EEDA /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DFC9EA23235E03D900F9EEDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFC9EA25235E04B600F9EEDA /* AssetsImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsImages.swift; sourceTree = "<group>"; };
+		DFC9EA2A2361735E00F9EEDA /* Dispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		DFC9EA32236173C600F9EEDA /* DecodableDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableDataParser.swift; sourceTree = "<group>"; };
+		DFC9EA34236173F500F9EEDA /* GitHubAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIRequest.swift; sourceTree = "<group>"; };
+		DFC9EA36236174CE00F9EEDA /* FetchRepositoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRepositoryRequest.swift; sourceTree = "<group>"; };
+		DFC9EA382361755E00F9EEDA /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		DFC9EA3B2361757900F9EEDA /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		DFC9EA3D236175F500F9EEDA /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		DFC9EA422361784600F9EEDA /* TestActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestActionCreator.swift; sourceTree = "<group>"; };
+		DFC9EA44236178F800F9EEDA /* TestStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStore.swift; sourceTree = "<group>"; };
+		DFC9EA4623647CCC00F9EEDA /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		DFC9EA4823647E4300F9EEDA /* TestAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAction.swift; sourceTree = "<group>"; };
+		DFC9EA4C2364867E00F9EEDA /* TestViewFluxTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewFluxTest.swift; sourceTree = "<group>"; };
 		F8E5696FD786588640123A97 /* Pods_GithubMVVMFlux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubMVVMFlux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,11 +163,15 @@
 		DFC9E9E2235D505000F9EEDA /* GithubMVVMFlux */ = {
 			isa = PBXGroup;
 			children = (
+				DFC9EA31236173AD00F9EEDA /* API */,
+				DFC9EA27236172FD00F9EEDA /* Module */,
 				DFC9EA1A235DFAE600F9EEDA /* Sources */,
 				DFC9EA14235DFADB00F9EEDA /* Resources */,
 				DFC9E9E3235D505000F9EEDA /* AppDelegate.swift */,
-				DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */,
+				DFC9EA3F2361760500F9EEDA /* Flux */,
 				DFC9E9E7235D505000F9EEDA /* ViewController.swift */,
+				DFC9EA3D236175F500F9EEDA /* TestViewModel.swift */,
+				DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */,
 				DFC9E9E9235D505000F9EEDA /* Main.storyboard */,
 				DFC9E9EE235D505100F9EEDA /* LaunchScreen.storyboard */,
 				DFC9E9F1235D505100F9EEDA /* Info.plist */,
@@ -156,6 +184,7 @@
 			children = (
 				DFC9E9FA235D505100F9EEDA /* GithubMVVMFluxTests.swift */,
 				DFC9E9FC235D505100F9EEDA /* Info.plist */,
+				DFC9EA4C2364867E00F9EEDA /* TestViewFluxTest.swift */,
 			);
 			path = GithubMVVMFluxTests;
 			sourceTree = "<group>";
@@ -211,6 +240,53 @@
 				DFC9EA23235E03D900F9EEDA /* Assets.xcassets */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		DFC9EA27236172FD00F9EEDA /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				DFC9EA282361734A00F9EEDA /* FluxCore */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		DFC9EA282361734A00F9EEDA /* FluxCore */ = {
+			isa = PBXGroup;
+			children = (
+				DFC9EA4623647CCC00F9EEDA /* Action.swift */,
+				DFC9EA2A2361735E00F9EEDA /* Dispatcher.swift */,
+			);
+			path = FluxCore;
+			sourceTree = "<group>";
+		};
+		DFC9EA31236173AD00F9EEDA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DFC9EA3A2361756C00F9EEDA /* model */,
+				DFC9EA32236173C600F9EEDA /* DecodableDataParser.swift */,
+				DFC9EA34236173F500F9EEDA /* GitHubAPIRequest.swift */,
+				DFC9EA36236174CE00F9EEDA /* FetchRepositoryRequest.swift */,
+				DFC9EA382361755E00F9EEDA /* Session.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DFC9EA3A2361756C00F9EEDA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DFC9EA3B2361757900F9EEDA /* Repository.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		DFC9EA3F2361760500F9EEDA /* Flux */ = {
+			isa = PBXGroup;
+			children = (
+				DFC9EA4823647E4300F9EEDA /* TestAction.swift */,
+				DFC9EA422361784600F9EEDA /* TestActionCreator.swift */,
+				DFC9EA44236178F800F9EEDA /* TestStore.swift */,
+			);
+			path = Flux;
 			sourceTree = "<group>";
 		};
 		F5DA8F04C30DB7AB98A33BA2 /* Frameworks */ = {
@@ -483,11 +559,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFC9EA392361755E00F9EEDA /* Session.swift in Sources */,
 				DFC9E9E8235D505000F9EEDA /* ViewController.swift in Sources */,
+				DFC9EA3C2361757900F9EEDA /* Repository.swift in Sources */,
 				DFC9EA21235DFC4000F9EEDA /* Colors.swift in Sources */,
+				DFC9EA2E2361735E00F9EEDA /* Dispatcher.swift in Sources */,
+				DFC9EA4723647CCC00F9EEDA /* Action.swift in Sources */,
 				DFC9E9E4235D505000F9EEDA /* AppDelegate.swift in Sources */,
+				DFC9EA45236178F800F9EEDA /* TestStore.swift in Sources */,
+				DFC9EA37236174CE00F9EEDA /* FetchRepositoryRequest.swift in Sources */,
 				DFC9E9E6235D505000F9EEDA /* SceneDelegate.swift in Sources */,
+				DFC9EA432361784600F9EEDA /* TestActionCreator.swift in Sources */,
+				DFC9EA3E236175F500F9EEDA /* TestViewModel.swift in Sources */,
+				DFC9EA35236173F500F9EEDA /* GitHubAPIRequest.swift in Sources */,
+				DFC9EA33236173C600F9EEDA /* DecodableDataParser.swift in Sources */,
 				DFC9EA26235E04B600F9EEDA /* AssetsImages.swift in Sources */,
+				DFC9EA4923647E4300F9EEDA /* TestAction.swift in Sources */,
 				DFC9EA1C235DFAE600F9EEDA /* StringsGen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFC9E9FB235D505100F9EEDA /* GithubMVVMFluxTests.swift in Sources */,
+				DFC9EA4D2364867E00F9EEDA /* TestViewFluxTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

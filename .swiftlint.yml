@@ -1,11 +1,10 @@
 disabled_rules: #ディフォルトで有効なルールから無視したいもの
-- trailing_whitespace
+- conditional_returns_on_newline
 
 opt_in_rules:
 - attributes
 - closure_end_indentation
 - closure_spacing
-- conditional_returns_on_newline
 - empty_count
 - explicit_init
 - fatal_error_message
@@ -21,6 +20,7 @@ opt_in_rules:
 - redundant_nil_coalescing
 - switch_case_on_newline
 - valid_docs
+- trailing_whitespace
 
 excluded:
 - Pods/
