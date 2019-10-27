@@ -19,15 +19,14 @@ final class TestActionCreator: Action {
 
     private let disposeBag = DisposeBag()
 
-    private var request: FetchRepositoryRequest?
+    private var request = FetchRepositoryRequest()
 
     required init(with dispatcher: Dispatcher = .shared) {
         self.dispatcher = dispatcher
     }
 
     func fetchRepository(userName: String) {
-        guard var request = request else { return }
-        request = FetchRepositoryRequest(userName: userName)
+        request.userName = userName
         Session.rx_sendRequest(request: request)
             .subscribe { [weak self] event in
                 switch event {

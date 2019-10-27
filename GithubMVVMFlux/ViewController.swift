@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         viewModel.repositories.subscribe(onNext: {
             print($0)
         })
+            .disposed(by: disposeBag)
     }
 
 }

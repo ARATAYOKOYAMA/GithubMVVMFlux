@@ -13,7 +13,7 @@ import RxSwift
 struct FetchRepositoryRequest: GitHubRequest {
     typealias Response = [Repository]
 
-    var userName: String
+    var userName: String = ""
 
     var method: HTTPMethod {
         return .get

@@ -6,12 +6,13 @@ target 'GithubMVVMFlux' do
   use_frameworks!
 
   # Pods for GithubMVVMFlux
+  pod 'Firebase/Analytics'
+  pod 'RealmSwift'
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'APIKit'
   pod 'SwiftLint'
   pod 'SwiftGen'
-  pod 'CocoaDebug', :configurations => ['Debug']
 
   target 'GithubMVVMFluxTests' do
     inherit! :search_paths

@@ -7,12 +7,39 @@
 //
 
 import UIKit
+import Firebase
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+//        //　Storyboardを指定
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        // Viewcontrollerを指定
+//        let initialViewController = storyboard.instantiateInitialViewController() as! ViewController
+
+        //　Storyboardを指定
+        let storyboard = UIStoryboard(name: "TestTabNav", bundle: nil)
+        // Viewcontrollerを指定
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabVC")
+
+        //　windowを生成
+        window = UIWindow(frame: UIScreen.main.bounds)
+        // rootViewControllerに入れる
+        window?.rootViewController = initialViewController
+        // 表示
+        window?.makeKeyAndVisible()
+
+        FirebaseApp.configure()
+        let config = Realm.Configuration(
+            schemaVersion: 1,
+            migrationBlock: { _, oldSchemaVersion in
+                if (oldSchemaVersion < 1) {}
+            })
+        Realm.Configuration.defaultConfiguration = config
         return true
     }
 

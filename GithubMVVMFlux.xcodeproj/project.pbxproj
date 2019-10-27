@@ -10,10 +10,10 @@
 		24E353CD60151F33C2CFF97E /* Pods_GithubMVVMFlux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E5696FD786588640123A97 /* Pods_GithubMVVMFlux.framework */; };
 		2D5DFF8BB5D0E79FB96DD367 /* Pods_GithubMVVMFluxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83AB967E7C8EAEA5A9D10CE9 /* Pods_GithubMVVMFluxTests.framework */; };
 		B902D8EBC89EA5155A535C4E /* Pods_GithubMVVMFlux_GithubMVVMFluxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DE57131FD4DB17E01E486C /* Pods_GithubMVVMFlux_GithubMVVMFluxUITests.framework */; };
+		DFC50A6B2365F002000F7640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC50A692365F001000F7640 /* Main.storyboard */; };
 		DFC9E9E4235D505000F9EEDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E3235D505000F9EEDA /* AppDelegate.swift */; };
 		DFC9E9E6235D505000F9EEDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */; };
 		DFC9E9E8235D505000F9EEDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E7235D505000F9EEDA /* ViewController.swift */; };
-		DFC9E9EB235D505000F9EEDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC9E9E9235D505000F9EEDA /* Main.storyboard */; };
 		DFC9E9F0235D505100F9EEDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC9E9EE235D505100F9EEDA /* LaunchScreen.storyboard */; };
 		DFC9E9FB235D505100F9EEDA /* GithubMVVMFluxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9FA235D505100F9EEDA /* GithubMVVMFluxTests.swift */; };
 		DFC9EA06235D505100F9EEDA /* GithubMVVMFluxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA05235D505100F9EEDA /* GithubMVVMFluxUITests.swift */; };
@@ -35,6 +35,8 @@
 		DFC9EA4723647CCC00F9EEDA /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA4623647CCC00F9EEDA /* Action.swift */; };
 		DFC9EA4923647E4300F9EEDA /* TestAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA4823647E4300F9EEDA /* TestAction.swift */; };
 		DFC9EA4D2364867E00F9EEDA /* TestViewFluxTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9EA4C2364867E00F9EEDA /* TestViewFluxTest.swift */; };
+		DFC9EA4F236579D400F9EEDA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFC9EA4E236579D400F9EEDA /* GoogleService-Info.plist */; };
+		DFC9EA512365E4CC00F9EEDA /* TestTabNav.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC9EA502365E4CC00F9EEDA /* TestTabNav.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,11 +65,11 @@
 		6075E568E7F8407DFDA1E14B /* Pods-GithubMVVMFlux.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubMVVMFlux.release.xcconfig"; path = "Target Support Files/Pods-GithubMVVMFlux/Pods-GithubMVVMFlux.release.xcconfig"; sourceTree = "<group>"; };
 		64DE57131FD4DB17E01E486C /* Pods_GithubMVVMFlux_GithubMVVMFluxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubMVVMFlux_GithubMVVMFluxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83AB967E7C8EAEA5A9D10CE9 /* Pods_GithubMVVMFluxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubMVVMFluxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFC50A6A2365F001000F7640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFC9E9E0235D505000F9EEDA /* GithubMVVMFlux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubMVVMFlux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC9E9E3235D505000F9EEDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DFC9E9E7235D505000F9EEDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DFC9E9EA235D505000F9EEDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFC9E9EF235D505100F9EEDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFC9E9F1235D505100F9EEDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFC9E9F6235D505100F9EEDA /* GithubMVVMFluxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubMVVMFluxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,8 @@
 		DFC9EA4623647CCC00F9EEDA /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		DFC9EA4823647E4300F9EEDA /* TestAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAction.swift; sourceTree = "<group>"; };
 		DFC9EA4C2364867E00F9EEDA /* TestViewFluxTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewFluxTest.swift; sourceTree = "<group>"; };
+		DFC9EA4E236579D400F9EEDA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DFC9EA502365E4CC00F9EEDA /* TestTabNav.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestTabNav.storyboard; sourceTree = "<group>"; };
 		F8E5696FD786588640123A97 /* Pods_GithubMVVMFlux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubMVVMFlux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -163,18 +167,20 @@
 		DFC9E9E2235D505000F9EEDA /* GithubMVVMFlux */ = {
 			isa = PBXGroup;
 			children = (
+				DFC9EA4E236579D400F9EEDA /* GoogleService-Info.plist */,
 				DFC9EA31236173AD00F9EEDA /* API */,
 				DFC9EA27236172FD00F9EEDA /* Module */,
 				DFC9EA1A235DFAE600F9EEDA /* Sources */,
 				DFC9EA14235DFADB00F9EEDA /* Resources */,
 				DFC9E9E3235D505000F9EEDA /* AppDelegate.swift */,
+				DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */,
 				DFC9EA3F2361760500F9EEDA /* Flux */,
 				DFC9E9E7235D505000F9EEDA /* ViewController.swift */,
 				DFC9EA3D236175F500F9EEDA /* TestViewModel.swift */,
-				DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */,
-				DFC9E9E9235D505000F9EEDA /* Main.storyboard */,
 				DFC9E9EE235D505100F9EEDA /* LaunchScreen.storyboard */,
 				DFC9E9F1235D505100F9EEDA /* Info.plist */,
+				DFC9EA502365E4CC00F9EEDA /* TestTabNav.storyboard */,
+				DFC50A692365F001000F7640 /* Main.storyboard */,
 			);
 			path = GithubMVVMFlux;
 			sourceTree = "<group>";
@@ -409,11 +415,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFC50A6B2365F002000F7640 /* Main.storyboard in Resources */,
 				DFC9EA1F235DFBEB00F9EEDA /* Localizable.strings in Resources */,
 				DFC9EA19235DFADB00F9EEDA /* colors.xml in Resources */,
 				DFC9E9F0235D505100F9EEDA /* LaunchScreen.storyboard in Resources */,
-				DFC9E9EB235D505000F9EEDA /* Main.storyboard in Resources */,
 				DFC9EA24235E03D900F9EEDA /* Assets.xcassets in Resources */,
+				DFC9EA512365E4CC00F9EEDA /* TestTabNav.storyboard in Resources */,
+				DFC9EA4F236579D400F9EEDA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,10 +620,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DFC9E9E9235D505000F9EEDA /* Main.storyboard */ = {
+		DFC50A692365F001000F7640 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DFC9E9EA235D505000F9EEDA /* Base */,
+				DFC50A6A2365F001000F7640 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -753,6 +761,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 634QW7RT8Y;
 				INFOPLIST_FILE = GithubMVVMFlux/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -772,6 +781,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 634QW7RT8Y;
 				INFOPLIST_FILE = GithubMVVMFlux/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

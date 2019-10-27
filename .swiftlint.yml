@@ -5,11 +5,23 @@ opt_in_rules:
 - attributes
 - closure_end_indentation
 - closure_spacing
+- closing-brace-spacing
+- closure-parameter-position
+- colon
+- comma-spacing
+- empty-parameters
 - empty_count
 - explicit_init
 - fatal_error_message
 - first_where
+- force-cast
 - force_unwrapping
+- force-try
+- statement-position
+- switch-and-case-statement-alignment
+- todo
+- unused-optional-binding
+- weak-delegate
 - implicitly_unwrapped_optional
 - number_separator
 - object_literal
@@ -26,5 +38,7 @@ excluded:
 - Pods/
 - Carthage/
 - vendor/bundle
+- GithubMVVMFlux/AppDelegate.swift
+- GithubMVVMFlux/SceneDelegate.swift
 
 line_length: 300
