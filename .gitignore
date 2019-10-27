@@ -127,3 +127,5 @@ DerivedData/
 /*.gcno
 
 
+# firebase
+GoogleService-Info.plist
