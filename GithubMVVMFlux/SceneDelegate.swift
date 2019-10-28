@@ -25,11 +25,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .disposed(by: disposeBag)
         
         viewModel.requireToken.subscribe({[weak self] _ in
-            self?.pushMain(scene: scene)
+            self?.pushTab(scene: scene)
         })
             .disposed(by: disposeBag)
         
         viewModel.setupStream.onNext(())
+        viewModel.setupStream.dispose()
         
     }
     
@@ -48,10 +49,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func pushTab(scene: UIWindowScene) {
-        //　Storyboardを指定
-        let storyboard = UIStoryboard(name: "TestTabNav", bundle: nil)
         // Viewcontrollerを指定
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabVC")
+        let initialViewController = TabBarController()
         
         //　windowを生成
         window = UIWindow(windowScene: scene)

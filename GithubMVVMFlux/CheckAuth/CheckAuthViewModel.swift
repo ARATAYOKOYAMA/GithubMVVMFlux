@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class CheckAuthViewModel {
+final class CheckAuthViewModel {
     enum ActionType {
         case fetchCurrentUser
     }
@@ -57,13 +57,6 @@ class CheckAuthViewModel {
             self.checkAuthActionCreator?.fetchCurrentUser()
         }
     }
-}
-
-// MARK: Input
-extension CheckAuthViewModel {
-//    var setup: AnyObserver<Void> {
-//        return _setupStream.asObserver()
-//    }
 }
 
 // MARK: Output
