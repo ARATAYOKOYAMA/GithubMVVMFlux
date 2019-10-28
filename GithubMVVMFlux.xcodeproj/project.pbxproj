@@ -11,6 +11,13 @@
 		2D5DFF8BB5D0E79FB96DD367 /* Pods_GithubMVVMFluxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83AB967E7C8EAEA5A9D10CE9 /* Pods_GithubMVVMFluxTests.framework */; };
 		B902D8EBC89EA5155A535C4E /* Pods_GithubMVVMFlux_GithubMVVMFluxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DE57131FD4DB17E01E486C /* Pods_GithubMVVMFlux_GithubMVVMFluxUITests.framework */; };
 		DFC50A6B2365F002000F7640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC50A692365F001000F7640 /* Main.storyboard */; };
+		DFC50A6D2367098D000F7640 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A6C2367098D000F7640 /* User.swift */; };
+		DFC50A7223670F53000F7640 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A7123670F53000F7640 /* LoginViewModel.swift */; };
+		DFC50A7523670FDE000F7640 /* CheckAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A7423670FDE000F7640 /* CheckAuthViewModel.swift */; };
+		DFC50A78236710A6000F7640 /* CheckAuthAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A77236710A6000F7640 /* CheckAuthAction.swift */; };
+		DFC50A7A23671121000F7640 /* CheckAuthActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A7923671121000F7640 /* CheckAuthActionCreator.swift */; };
+		DFC50A7E236728EA000F7640 /* CheckAuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A7D236728EA000F7640 /* CheckAuthStore.swift */; };
+		DFC50A8123672A86000F7640 /* ObservableType.filterNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A8023672A86000F7640 /* ObservableType.filterNil.swift */; };
 		DFC9E9E4235D505000F9EEDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E3235D505000F9EEDA /* AppDelegate.swift */; };
 		DFC9E9E6235D505000F9EEDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */; };
 		DFC9E9E8235D505000F9EEDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E7235D505000F9EEDA /* ViewController.swift */; };
@@ -66,6 +73,13 @@
 		64DE57131FD4DB17E01E486C /* Pods_GithubMVVMFlux_GithubMVVMFluxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubMVVMFlux_GithubMVVMFluxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83AB967E7C8EAEA5A9D10CE9 /* Pods_GithubMVVMFluxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubMVVMFluxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC50A6A2365F001000F7640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DFC50A6C2367098D000F7640 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DFC50A7123670F53000F7640 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		DFC50A7423670FDE000F7640 /* CheckAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAuthViewModel.swift; sourceTree = "<group>"; };
+		DFC50A77236710A6000F7640 /* CheckAuthAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAuthAction.swift; sourceTree = "<group>"; };
+		DFC50A7923671121000F7640 /* CheckAuthActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAuthActionCreator.swift; sourceTree = "<group>"; };
+		DFC50A7D236728EA000F7640 /* CheckAuthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAuthStore.swift; sourceTree = "<group>"; };
+		DFC50A8023672A86000F7640 /* ObservableType.filterNil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableType.filterNil.swift; sourceTree = "<group>"; };
 		DFC9E9E0235D505000F9EEDA /* GithubMVVMFlux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubMVVMFlux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC9E9E3235D505000F9EEDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +156,49 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DFC50A6E23670F1C000F7640 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DFC50A6F23670F2B000F7640 /* Flux */,
+				DFC50A7123670F53000F7640 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DFC50A6F23670F2B000F7640 /* Flux */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flux;
+			sourceTree = "<group>";
+		};
+		DFC50A7323670FA5000F7640 /* CheckAuth */ = {
+			isa = PBXGroup;
+			children = (
+				DFC50A762367108D000F7640 /* Flux */,
+				DFC50A7423670FDE000F7640 /* CheckAuthViewModel.swift */,
+			);
+			path = CheckAuth;
+			sourceTree = "<group>";
+		};
+		DFC50A762367108D000F7640 /* Flux */ = {
+			isa = PBXGroup;
+			children = (
+				DFC50A77236710A6000F7640 /* CheckAuthAction.swift */,
+				DFC50A7923671121000F7640 /* CheckAuthActionCreator.swift */,
+				DFC50A7D236728EA000F7640 /* CheckAuthStore.swift */,
+			);
+			path = Flux;
+			sourceTree = "<group>";
+		};
+		DFC50A7F23672A74000F7640 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DFC50A8023672A86000F7640 /* ObservableType.filterNil.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		DFC9E9D7235D505000F9EEDA = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +224,7 @@
 		DFC9E9E2235D505000F9EEDA /* GithubMVVMFlux */ = {
 			isa = PBXGroup;
 			children = (
+				DFC50A7F23672A74000F7640 /* Extension */,
 				DFC9EA4E236579D400F9EEDA /* GoogleService-Info.plist */,
 				DFC9EA31236173AD00F9EEDA /* API */,
 				DFC9EA27236172FD00F9EEDA /* Module */,
@@ -174,6 +232,8 @@
 				DFC9EA14235DFADB00F9EEDA /* Resources */,
 				DFC9E9E3235D505000F9EEDA /* AppDelegate.swift */,
 				DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */,
+				DFC50A7323670FA5000F7640 /* CheckAuth */,
+				DFC50A6E23670F1C000F7640 /* Login */,
 				DFC9EA3F2361760500F9EEDA /* Flux */,
 				DFC9E9E7235D505000F9EEDA /* ViewController.swift */,
 				DFC9EA3D236175F500F9EEDA /* TestViewModel.swift */,
@@ -281,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				DFC9EA3B2361757900F9EEDA /* Repository.swift */,
+				DFC50A6C2367098D000F7640 /* User.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -569,20 +630,27 @@
 			files = (
 				DFC9EA392361755E00F9EEDA /* Session.swift in Sources */,
 				DFC9E9E8235D505000F9EEDA /* ViewController.swift in Sources */,
+				DFC50A7523670FDE000F7640 /* CheckAuthViewModel.swift in Sources */,
+				DFC50A7E236728EA000F7640 /* CheckAuthStore.swift in Sources */,
 				DFC9EA3C2361757900F9EEDA /* Repository.swift in Sources */,
 				DFC9EA21235DFC4000F9EEDA /* Colors.swift in Sources */,
 				DFC9EA2E2361735E00F9EEDA /* Dispatcher.swift in Sources */,
+				DFC50A8123672A86000F7640 /* ObservableType.filterNil.swift in Sources */,
 				DFC9EA4723647CCC00F9EEDA /* Action.swift in Sources */,
 				DFC9E9E4235D505000F9EEDA /* AppDelegate.swift in Sources */,
 				DFC9EA45236178F800F9EEDA /* TestStore.swift in Sources */,
+				DFC50A7A23671121000F7640 /* CheckAuthActionCreator.swift in Sources */,
 				DFC9EA37236174CE00F9EEDA /* FetchRepositoryRequest.swift in Sources */,
 				DFC9E9E6235D505000F9EEDA /* SceneDelegate.swift in Sources */,
+				DFC50A78236710A6000F7640 /* CheckAuthAction.swift in Sources */,
 				DFC9EA432361784600F9EEDA /* TestActionCreator.swift in Sources */,
 				DFC9EA3E236175F500F9EEDA /* TestViewModel.swift in Sources */,
 				DFC9EA35236173F500F9EEDA /* GitHubAPIRequest.swift in Sources */,
 				DFC9EA33236173C600F9EEDA /* DecodableDataParser.swift in Sources */,
+				DFC50A6D2367098D000F7640 /* User.swift in Sources */,
 				DFC9EA26235E04B600F9EEDA /* AssetsImages.swift in Sources */,
 				DFC9EA4923647E4300F9EEDA /* TestAction.swift in Sources */,
+				DFC50A7223670F53000F7640 /* LoginViewModel.swift in Sources */,
 				DFC9EA1C235DFAE600F9EEDA /* StringsGen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

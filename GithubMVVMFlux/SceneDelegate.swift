@@ -7,32 +7,58 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    private let viewModel = CheckAuthViewModel()
+    private let disposeBag = DisposeBag()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let scene = (scene as? UIWindowScene) else { return }
-//        //　Storyboardを指定
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        // Viewcontrollerを指定
-//        let initialViewController = storyboard.instantiateInitialViewController() as! ViewController
-       //　Storyboardを指定
-        let storyboard = UIStoryboard(name: "TestTabNav", bundle: nil)
+        
+        viewModel.user.subscribe({[weak self] user in
+            self?.pushTab(scene: scene)
+        })
+            .disposed(by: disposeBag)
+        
+        viewModel.requireToken.subscribe({[weak self] _ in
+            self?.pushMain(scene: scene)
+        })
+            .disposed(by: disposeBag)
+        
+        viewModel.setupStream.onNext(())
+        
+    }
+    
+    private func pushMain(scene: UIWindowScene) {
+        //　Storyboardを指定
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         // Viewcontrollerを指定
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabVC")
-
+        let initialViewController = storyboard.instantiateInitialViewController() as! ViewController
+        
         //　windowを生成
         window = UIWindow(windowScene: scene)
         // rootViewControllerに入れる
         window?.rootViewController = initialViewController
         // 表示
         window?.makeKeyAndVisible()
+    }
+    
+    private func pushTab(scene: UIWindowScene) {
+        //　Storyboardを指定
+        let storyboard = UIStoryboard(name: "TestTabNav", bundle: nil)
+        // Viewcontrollerを指定
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabVC")
         
+        //　windowを生成
+        window = UIWindow(windowScene: scene)
+        // rootViewControllerに入れる
+        window?.rootViewController = initialViewController
+        // 表示
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
