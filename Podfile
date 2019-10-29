@@ -7,6 +7,7 @@ target 'GithubMVVMFlux' do
 
   # Pods for GithubMVVMFlux
   pod 'Firebase/Analytics'
+  pod 'Tabman', '~> 2.6'
   pod 'RealmSwift'
   pod 'RxSwift'
   pod 'RxCocoa'

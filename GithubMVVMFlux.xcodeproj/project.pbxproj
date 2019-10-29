@@ -27,6 +27,7 @@
 		DFC50A9523687A12000F7640 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A9423687A12000F7640 /* SearchViewController.swift */; };
 		DFC50A9823687A4C000F7640 /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A9723687A4C000F7640 /* TrendViewController.swift */; };
 		DFC50A9A23687A59000F7640 /* Trend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC50A9923687A59000F7640 /* Trend.storyboard */; };
+		DFC50A9D23687F3A000F7640 /* RepositoryFavoratePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A9C23687F3A000F7640 /* RepositoryFavoratePageViewController.swift */; };
 		DFC9E9E4235D505000F9EEDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E3235D505000F9EEDA /* AppDelegate.swift */; };
 		DFC9E9E6235D505000F9EEDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */; };
 		DFC9E9E8235D505000F9EEDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E7235D505000F9EEDA /* ViewController.swift */; };
@@ -98,6 +99,7 @@
 		DFC50A9423687A12000F7640 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DFC50A9723687A4C000F7640 /* TrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewController.swift; sourceTree = "<group>"; };
 		DFC50A9923687A59000F7640 /* Trend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trend.storyboard; sourceTree = "<group>"; };
+		DFC50A9C23687F3A000F7640 /* RepositoryFavoratePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFavoratePageViewController.swift; sourceTree = "<group>"; };
 		DFC9E9E0235D505000F9EEDA /* GithubMVVMFlux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubMVVMFlux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC9E9E3235D505000F9EEDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -262,6 +264,14 @@
 			path = Trend;
 			sourceTree = "<group>";
 		};
+		DFC50A9B23687EEF000F7640 /* Repository+Favorate */ = {
+			isa = PBXGroup;
+			children = (
+				DFC50A9C23687F3A000F7640 /* RepositoryFavoratePageViewController.swift */,
+			);
+			path = "Repository+Favorate";
+			sourceTree = "<group>";
+		};
 		DFC9E9D7235D505000F9EEDA = {
 			isa = PBXGroup;
 			children = (
@@ -298,8 +308,9 @@
 				DFC50A84236735CC000F7640 /* TabBar */,
 				DFC50A9623687A24000F7640 /* Trend */,
 				DFC50A91236879E0000F7640 /* Search */,
-				DFC50A8C23673DBF000F7640 /* Favorate */,
+				DFC50A9B23687EEF000F7640 /* Repository+Favorate */,
 				DFC50A8923673769000F7640 /* Repository */,
+				DFC50A8C23673DBF000F7640 /* Favorate */,
 				DFC50A7323670FA5000F7640 /* CheckAuth */,
 				DFC50A6E23670F1C000F7640 /* Login */,
 				DFC9EA3F2361760500F9EEDA /* Flux */,
@@ -727,6 +738,7 @@
 				DFC9EA4923647E4300F9EEDA /* TestAction.swift in Sources */,
 				DFC50A7223670F53000F7640 /* LoginViewModel.swift in Sources */,
 				DFC9EA1C235DFAE600F9EEDA /* StringsGen.swift in Sources */,
+				DFC50A9D23687F3A000F7640 /* RepositoryFavoratePageViewController.swift in Sources */,
 				DFC50A9523687A12000F7640 /* SearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

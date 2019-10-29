@@ -1,5 +1,6 @@
 PODS:
   - APIKit (5.0.0)
+  - AutoInsetter (1.8.0)
   - Firebase/Analytics (6.11.0):
     - Firebase/Core
   - Firebase/Core (6.11.0):
@@ -65,6 +66,7 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - Pageboy (3.5.0)
   - Realm (3.20.0):
     - Realm/Headers (= 3.20.0)
   - Realm/Headers (3.20.0)
@@ -78,6 +80,9 @@ PODS:
   - RxSwift (5.0.0)
   - SwiftGen (6.1.0)
   - SwiftLint (0.35.0)
+  - Tabman (2.6.3):
+    - AutoInsetter (~> 1.8.0)
+    - Pageboy (~> 3.5.0)
 
 DEPENDENCIES:
   - APIKit
@@ -87,10 +92,12 @@ DEPENDENCIES:
   - RxSwift
   - SwiftGen
   - SwiftLint
+  - Tabman (~> 2.6)
 
 SPEC REPOS:
   trunk:
     - APIKit
+    - AutoInsetter
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -102,6 +109,7 @@ SPEC REPOS:
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - nanopb
+    - Pageboy
     - Realm
     - RealmSwift
     - RxCocoa
@@ -109,9 +117,11 @@ SPEC REPOS:
     - RxSwift
     - SwiftGen
     - SwiftLint
+    - Tabman
 
 SPEC CHECKSUMS:
   APIKit: b27d79b022733b2f50e7a092e67c4cb9ea30f968
+  AutoInsetter: 0b90ca74e36561c340129045a3722c51a0b15c58
   Firebase: bc9cfc7a96c73268656d5aaab453ff1b4b530e0e
   FirebaseAnalytics: 0e3ecff2c5d86070f7d4325e21f1edabfbd558dc
   FirebaseCore: beeff42c07c30ea94702471d99db2089b594fbbd
@@ -123,6 +133,7 @@ SPEC CHECKSUMS:
   GoogleDataTransportCCTSupport: f6ab1962e9dc05ab1fb938b795e5b310209edeec
   GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  Pageboy: 3794c578aae5fcce06e90b3ed4a0ad6b807d75bb
   Realm: 8b2ca5bc6479a91f379b6b42b5922e396cd5ba5a
   RealmSwift: 1949ef26a279e1845bd51d591b9103adfcd121df
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
@@ -130,7 +141,8 @@ SPEC CHECKSUMS:
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 5553187048b900c91aa03552807681bb6b027846
+  Tabman: 63eae331ae7a9388ae389b1808f1939269fcdece
 
-PODFILE CHECKSUM: 6275f3adebaf347c187f88c672e14f0eb8692e81
+PODFILE CHECKSUM: 11f78053760224da4a00223b9ab2ce25b6c2c8d0
 
 COCOAPODS: 1.8.4
