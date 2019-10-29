@@ -11,22 +11,27 @@ import UIKit
 class TabBarController: UITabBarController {
 
     private var currentUser: User?
-    private var vc1: RepositoryViewController!
-    private var vc2: FavorateViewController!
+    private let storyboardRepository = UIStoryboard(name: "Repository", bundle: nil)
+    private let storyboardFavorate = UIStoryboard(name: "Favorate", bundle: nil)
+    private let storyboardTrend = UIStoryboard(name: "Trend", bundle: nil)
+    private let storyboardSearch = UIStoryboard(name: "Search", bundle: nil)
+    private var repositoryViewController: RepositoryViewController!
+    private var favorateViewController: FavorateViewController!
+    private var trendViewController: TrendViewController!
+    private var searchViewController: SearchViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let storyboardRepository = UIStoryboard(name: "Repository", bundle: nil)
-        let storyboardFavorate = UIStoryboard(name: "Favorate", bundle: nil)
-
         // TabBarController
-        vc1 = storyboardRepository.instantiateViewController(withIdentifier: "storyboardRepository") as? RepositoryViewController
-        vc1.test = 100
-        vc2 = storyboardFavorate.instantiateViewController(withIdentifier: "storyboardFavorate") as? FavorateViewController
-        vc1.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
-        vc2.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 2)
-        let vcs: [UIViewController] = [vc1, vc2]
+        repositoryViewController = storyboardRepository.instantiateViewController(withIdentifier: "storyboardRepository") as? RepositoryViewController
+        favorateViewController = storyboardFavorate.instantiateViewController(withIdentifier: "storyboardFavorate") as? FavorateViewController
+        trendViewController = storyboardTrend.instantiateViewController(withIdentifier: "storyboardTrend") as? TrendViewController
+        searchViewController = storyboardSearch.instantiateViewController(withIdentifier: "storyboardSearch") as? SearchViewController
+        repositoryViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        trendViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 2)
+        searchViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 3)
+        let vcs: [UIViewController] = [repositoryViewController, trendViewController, searchViewController]
         self.setViewControllers(vcs, animated: true)
     }
 
