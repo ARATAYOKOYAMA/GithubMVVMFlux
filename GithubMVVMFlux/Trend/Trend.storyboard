@@ -15,21 +15,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHF-lS-fu5">
-                                <rect key="frame" x="186" y="415" width="44" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cm0-od-0az">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="I5R-XY-QqG" firstAttribute="bottom" secondItem="cm0-od-0az" secondAttribute="bottom" id="81e-L4-r0R"/>
+                            <constraint firstItem="I5R-XY-QqG" firstAttribute="trailing" secondItem="cm0-od-0az" secondAttribute="trailing" id="Nnq-bo-esX"/>
+                            <constraint firstItem="cm0-od-0az" firstAttribute="top" secondItem="I5R-XY-QqG" secondAttribute="top" id="j0q-76-Pm8"/>
+                            <constraint firstItem="cm0-od-0az" firstAttribute="leading" secondItem="I5R-XY-QqG" secondAttribute="leading" id="xrQ-KZ-m0k"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="I5R-XY-QqG"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42a-Hl-8Xc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="38" y="137"/>
+            <point key="canvasLocation" x="37.681159420289859" y="136.60714285714286"/>
         </scene>
     </scenes>
 </document>

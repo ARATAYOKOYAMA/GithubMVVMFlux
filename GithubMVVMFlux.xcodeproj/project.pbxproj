@@ -14,6 +14,8 @@
 		DF86EB37236CE9A800F11537 /* TrendAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86EB36236CE9A800F11537 /* TrendAction.swift */; };
 		DF86EB39236CE9B500F11537 /* TrendActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86EB38236CE9B500F11537 /* TrendActionCreator.swift */; };
 		DF86EB3B236CE9C500F11537 /* TrendStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86EB3A236CE9C500F11537 /* TrendStore.swift */; };
+		DF86EB3E236CF55600F11537 /* TrendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86EB3C236CF55600F11537 /* TrendTableViewCell.swift */; };
+		DF86EB3F236CF55600F11537 /* TrendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF86EB3D236CF55600F11537 /* TrendTableViewCell.xib */; };
 		DFC50A6B2365F002000F7640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC50A692365F001000F7640 /* Main.storyboard */; };
 		DFC50A6D2367098D000F7640 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A6C2367098D000F7640 /* User.swift */; };
 		DFC50A7223670F53000F7640 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A7123670F53000F7640 /* LoginViewModel.swift */; };
@@ -93,6 +95,8 @@
 		DF86EB36236CE9A800F11537 /* TrendAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendAction.swift; sourceTree = "<group>"; };
 		DF86EB38236CE9B500F11537 /* TrendActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendActionCreator.swift; sourceTree = "<group>"; };
 		DF86EB3A236CE9C500F11537 /* TrendStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendStore.swift; sourceTree = "<group>"; };
+		DF86EB3C236CF55600F11537 /* TrendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendTableViewCell.swift; sourceTree = "<group>"; };
+		DF86EB3D236CF55600F11537 /* TrendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendTableViewCell.xib; sourceTree = "<group>"; };
 		DFC50A6A2365F001000F7640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFC50A6C2367098D000F7640 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DFC50A7123670F53000F7640 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -286,6 +290,8 @@
 				DF86EB34236CE99200F11537 /* TrendViewModel.swift */,
 				DFC50A9723687A4C000F7640 /* TrendViewController.swift */,
 				DFC50A9923687A59000F7640 /* Trend.storyboard */,
+				DF86EB3C236CF55600F11537 /* TrendTableViewCell.swift */,
+				DF86EB3D236CF55600F11537 /* TrendTableViewCell.xib */,
 			);
 			path = Trend;
 			sourceTree = "<group>";
@@ -600,6 +606,7 @@
 				DFC50A9023673E99000F7640 /* Repository.storyboard in Resources */,
 				DFC9EA24235E03D900F9EEDA /* Assets.xcassets in Resources */,
 				DFC9EA512365E4CC00F9EEDA /* Favorate.storyboard in Resources */,
+				DF86EB3F236CF55600F11537 /* TrendTableViewCell.xib in Resources */,
 				DFC9EA4F236579D400F9EEDA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -781,6 +788,7 @@
 				DFC50AA3236C9AC5000F7640 /* GithubTrendingAPIRequest.swift in Sources */,
 				DFC9EA4923647E4300F9EEDA /* TestAction.swift in Sources */,
 				DFC50A7223670F53000F7640 /* LoginViewModel.swift in Sources */,
+				DF86EB3E236CF55600F11537 /* TrendTableViewCell.swift in Sources */,
 				DFC9EA1C235DFAE600F9EEDA /* StringsGen.swift in Sources */,
 				DFC50A9D23687F3A000F7640 /* RepositoryFavoratePageViewController.swift in Sources */,
 				DFC50A9523687A12000F7640 /* SearchViewController.swift in Sources */,
