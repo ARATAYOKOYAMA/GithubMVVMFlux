@@ -1,50 +1,44 @@
 //
-//  TrendViewController.swift
+//  TrendActionCreator.swift
 //  GithubMVVMFlux
 //
-//  Created by 横山新 on 2019/10/29.
+//  Created by 横山新 on 2019/11/02.
 //  Copyright © 2019 ARATAYOKOYAMA. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import APIKit
 import RxSwift
 import RxCocoa
 
-final class TrendViewController: UIViewController {
+final class TrendActionCreator: Action {
     
-    private let viewModel = TrendViewModel()
+    static let shared = TrendActionCreator()
+
+    private var dispatcher: Dispatcher
 
     private let disposeBag = DisposeBag()
-
+    
     private var request = FetchTrendRepositoreis()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        fetchRepository()
-        
-        // MARK: Output
-        viewModel.repositories.subscribe(onNext: {
-            print($0)
-        })
-        .disposed(by: disposeBag)
+    
+    required init(with dispatcher: Dispatcher = .shared) {
+        self.dispatcher = dispatcher
     }
-
+    
     func fetchRepository() {
-        print(request.baseURL)
-        print(request.path)
         Session.rx_sendRequest(request: request)
             .subscribe { [weak self] event in
                 switch event {
                 case .next(let repos):
                     print(repos)
+                    self?.dispatcher.dispatch(TrendAction.fetchRepository(repos))
                 case .error(let error):
                     print(error)
+                    self?.dispatcher.dispatch(TrendAction.error(error))
                 default:
                     break
                 }
             }
         .disposed(by: disposeBag)
     }
-
 }

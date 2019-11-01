@@ -10,6 +10,10 @@
 		24E353CD60151F33C2CFF97E /* Pods_GithubMVVMFlux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E5696FD786588640123A97 /* Pods_GithubMVVMFlux.framework */; };
 		2D5DFF8BB5D0E79FB96DD367 /* Pods_GithubMVVMFluxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83AB967E7C8EAEA5A9D10CE9 /* Pods_GithubMVVMFluxTests.framework */; };
 		B902D8EBC89EA5155A535C4E /* Pods_GithubMVVMFlux_GithubMVVMFluxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DE57131FD4DB17E01E486C /* Pods_GithubMVVMFlux_GithubMVVMFluxUITests.framework */; };
+		DF86EB35236CE99200F11537 /* TrendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86EB34236CE99200F11537 /* TrendViewModel.swift */; };
+		DF86EB37236CE9A800F11537 /* TrendAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86EB36236CE9A800F11537 /* TrendAction.swift */; };
+		DF86EB39236CE9B500F11537 /* TrendActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86EB38236CE9B500F11537 /* TrendActionCreator.swift */; };
+		DF86EB3B236CE9C500F11537 /* TrendStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86EB3A236CE9C500F11537 /* TrendStore.swift */; };
 		DFC50A6B2365F002000F7640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC50A692365F001000F7640 /* Main.storyboard */; };
 		DFC50A6D2367098D000F7640 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A6C2367098D000F7640 /* User.swift */; };
 		DFC50A7223670F53000F7640 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A7123670F53000F7640 /* LoginViewModel.swift */; };
@@ -85,6 +89,10 @@
 		6075E568E7F8407DFDA1E14B /* Pods-GithubMVVMFlux.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubMVVMFlux.release.xcconfig"; path = "Target Support Files/Pods-GithubMVVMFlux/Pods-GithubMVVMFlux.release.xcconfig"; sourceTree = "<group>"; };
 		64DE57131FD4DB17E01E486C /* Pods_GithubMVVMFlux_GithubMVVMFluxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubMVVMFlux_GithubMVVMFluxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83AB967E7C8EAEA5A9D10CE9 /* Pods_GithubMVVMFluxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubMVVMFluxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF86EB34236CE99200F11537 /* TrendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewModel.swift; sourceTree = "<group>"; };
+		DF86EB36236CE9A800F11537 /* TrendAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendAction.swift; sourceTree = "<group>"; };
+		DF86EB38236CE9B500F11537 /* TrendActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendActionCreator.swift; sourceTree = "<group>"; };
+		DF86EB3A236CE9C500F11537 /* TrendStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendStore.swift; sourceTree = "<group>"; };
 		DFC50A6A2365F001000F7640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFC50A6C2367098D000F7640 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DFC50A7123670F53000F7640 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -182,6 +190,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DF86EB33236CE96E00F11537 /* Flux */ = {
+			isa = PBXGroup;
+			children = (
+				DF86EB36236CE9A800F11537 /* TrendAction.swift */,
+				DF86EB38236CE9B500F11537 /* TrendActionCreator.swift */,
+				DF86EB3A236CE9C500F11537 /* TrendStore.swift */,
+			);
+			path = Flux;
+			sourceTree = "<group>";
+		};
 		DFC50A6E23670F1C000F7640 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +282,8 @@
 		DFC50A9623687A24000F7640 /* Trend */ = {
 			isa = PBXGroup;
 			children = (
+				DF86EB33236CE96E00F11537 /* Flux */,
+				DF86EB34236CE99200F11537 /* TrendViewModel.swift */,
 				DFC50A9723687A4C000F7640 /* TrendViewController.swift */,
 				DFC50A9923687A59000F7640 /* Trend.storyboard */,
 			);
@@ -737,15 +757,19 @@
 				DFC9EA2E2361735E00F9EEDA /* Dispatcher.swift in Sources */,
 				DFC50A8123672A86000F7640 /* ObservableType.filterNil.swift in Sources */,
 				DFC9EA4723647CCC00F9EEDA /* Action.swift in Sources */,
+				DF86EB37236CE9A800F11537 /* TrendAction.swift in Sources */,
 				DFC9E9E4235D505000F9EEDA /* AppDelegate.swift in Sources */,
 				DFC9EA45236178F800F9EEDA /* TestStore.swift in Sources */,
 				DFC50A7A23671121000F7640 /* CheckAuthActionCreator.swift in Sources */,
 				DFC50A8B23673796000F7640 /* RepositoryViewController.swift in Sources */,
 				DFC9EA37236174CE00F9EEDA /* FetchRepositoryRequest.swift in Sources */,
+				DF86EB39236CE9B500F11537 /* TrendActionCreator.swift in Sources */,
 				DFC50A8323673380000F7640 /* LoginViewController.swift in Sources */,
+				DF86EB3B236CE9C500F11537 /* TrendStore.swift in Sources */,
 				DFC9E9E6235D505000F9EEDA /* SceneDelegate.swift in Sources */,
 				DFC50A78236710A6000F7640 /* CheckAuthAction.swift in Sources */,
 				DFC50AA7236C9BD6000F7640 /* TrendRepository.swift in Sources */,
+				DF86EB35236CE99200F11537 /* TrendViewModel.swift in Sources */,
 				DFC50A8E23673E19000F7640 /* FavorateViewController.swift in Sources */,
 				DFC9EA432361784600F9EEDA /* TestActionCreator.swift in Sources */,
 				DFC9EA3E236175F500F9EEDA /* TestViewModel.swift in Sources */,
