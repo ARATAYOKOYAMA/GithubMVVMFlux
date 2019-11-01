@@ -11,21 +11,21 @@ import RxSwift
 import RxCocoa
 
 final class TrendStore {
-    
+
     static let shared = TrendStore()
-    
+
     private let disposeBag = DisposeBag()
-    
+
     var trendRepositories: Observable<TrendRepository> {
         return _trendRepositoriesStream.asObservable()
     }
-    
+
     private let _trendRepositoriesStream = BehaviorRelay<TrendRepository>(value: [])
-    
+
     required init(with dispatcher: Dispatcher = .shared) {
-        
+
         dispatcher.register(handler: { [weak self] (action: TrendAction) in
-            guard let wself = self else {return}
+            guard let wself = self else { return }
             switch action {
             case .fetchRepository(let result):
                 wself._trendRepositoriesStream.accept(result)
@@ -34,5 +34,5 @@ final class TrendStore {
             }
         }).disposed(by: disposeBag)
     }
-    
+
 }

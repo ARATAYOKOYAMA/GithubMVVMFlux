@@ -12,19 +12,19 @@ import RxSwift
 import RxCocoa
 
 final class TrendActionCreator: Action {
-    
+
     static let shared = TrendActionCreator()
 
     private var dispatcher: Dispatcher
 
     private let disposeBag = DisposeBag()
-    
+
     private var request = FetchTrendRepositoreis()
-    
+
     required init(with dispatcher: Dispatcher = .shared) {
         self.dispatcher = dispatcher
     }
-    
+
     func fetchRepository() {
         Session.rx_sendRequest(request: request)
             .subscribe { [weak self] event in

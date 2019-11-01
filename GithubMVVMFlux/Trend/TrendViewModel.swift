@@ -11,20 +11,20 @@ import RxSwift
 import RxCocoa
 
 final class TrendViewModel {
-    
+
     enum ActionType {
         case fetchRepository
     }
-    
+
     // MARK: VC
     private let _repositories = PublishRelay<TrendRepository>()
-    
+
     // MARK: Action
     private let trendActionCreator: TrendActionCreator?
-    
+
     // MARK: Store
     private let trendStore: TrendStore?
-    
+
     init(with actionCreator: TrendActionCreator = .shared, store: TrendStore = .shared) {
         self.trendActionCreator = actionCreator
         self.trendStore = store

@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 
 final class TrendViewController: UIViewController {
-    
+
     private let viewModel = TrendViewModel()
 
     private let disposeBag = DisposeBag()
@@ -22,12 +22,12 @@ final class TrendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchRepository()
-        
+
         // MARK: Output
         viewModel.repositories.subscribe(onNext: {
             print($0)
         })
-        .disposed(by: disposeBag)
+            .disposed(by: disposeBag)
     }
 
     func fetchRepository() {
