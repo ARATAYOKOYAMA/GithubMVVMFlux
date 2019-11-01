@@ -13,6 +13,8 @@ import RxCocoa
 
 final class TrendViewController: UIViewController {
 
+    @IBOutlet private weak var tableView: UITableView!
+    
     private let viewModel = TrendViewModel()
 
     private let disposeBag = DisposeBag()
