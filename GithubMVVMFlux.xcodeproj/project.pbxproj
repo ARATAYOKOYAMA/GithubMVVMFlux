@@ -28,6 +28,7 @@
 		DFC50A9823687A4C000F7640 /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A9723687A4C000F7640 /* TrendViewController.swift */; };
 		DFC50A9A23687A59000F7640 /* Trend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC50A9923687A59000F7640 /* Trend.storyboard */; };
 		DFC50A9D23687F3A000F7640 /* RepositoryFavoratePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A9C23687F3A000F7640 /* RepositoryFavoratePageViewController.swift */; };
+		DFC50AA0236C947B000F7640 /* TestESTabBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A9F236C947B000F7640 /* TestESTabBarContentView.swift */; };
 		DFC9E9E4235D505000F9EEDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E3235D505000F9EEDA /* AppDelegate.swift */; };
 		DFC9E9E6235D505000F9EEDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */; };
 		DFC9E9E8235D505000F9EEDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E7235D505000F9EEDA /* ViewController.swift */; };
@@ -100,6 +101,7 @@
 		DFC50A9723687A4C000F7640 /* TrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewController.swift; sourceTree = "<group>"; };
 		DFC50A9923687A59000F7640 /* Trend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trend.storyboard; sourceTree = "<group>"; };
 		DFC50A9C23687F3A000F7640 /* RepositoryFavoratePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFavoratePageViewController.swift; sourceTree = "<group>"; };
+		DFC50A9F236C947B000F7640 /* TestESTabBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestESTabBarContentView.swift; sourceTree = "<group>"; };
 		DFC9E9E0235D505000F9EEDA /* GithubMVVMFlux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubMVVMFlux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC9E9E3235D505000F9EEDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -272,6 +274,14 @@
 			path = "Repository+Favorate";
 			sourceTree = "<group>";
 		};
+		DFC50A9E236C9443000F7640 /* ESTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				DFC50A9F236C947B000F7640 /* TestESTabBarContentView.swift */,
+			);
+			path = ESTabBar;
+			sourceTree = "<group>";
+		};
 		DFC9E9D7235D505000F9EEDA = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +399,7 @@
 		DFC9EA27236172FD00F9EEDA /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				DFC50A9E236C9443000F7640 /* ESTabBar */,
 				DFC9EA282361734A00F9EEDA /* FluxCore */,
 			);
 			path = Module;
@@ -727,6 +738,7 @@
 				DFC50A8323673380000F7640 /* LoginViewController.swift in Sources */,
 				DFC9E9E6235D505000F9EEDA /* SceneDelegate.swift in Sources */,
 				DFC50A78236710A6000F7640 /* CheckAuthAction.swift in Sources */,
+				DFC50AA0236C947B000F7640 /* TestESTabBarContentView.swift in Sources */,
 				DFC50A8E23673E19000F7640 /* FavorateViewController.swift in Sources */,
 				DFC9EA432361784600F9EEDA /* TestActionCreator.swift in Sources */,
 				DFC9EA3E236175F500F9EEDA /* TestViewModel.swift in Sources */,

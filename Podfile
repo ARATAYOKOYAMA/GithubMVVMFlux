@@ -9,6 +9,7 @@ target 'GithubMVVMFlux' do
   pod 'Firebase/Analytics'
   pod 'Tabman', '~> 2.6'
   pod "ESTabBarController-swift"
+  pod 'pop', '~> 1.0'
   pod 'RealmSwift'
   pod 'RxSwift'
   pod 'RxCocoa'
