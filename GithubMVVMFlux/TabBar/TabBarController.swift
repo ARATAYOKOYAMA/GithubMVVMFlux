@@ -21,6 +21,11 @@ class TabBarController: UITabBarController {
     private var trendViewController: TrendViewController!
     private var searchViewController: SearchViewController!
 
+    // MARK: Navigation
+    private var pageViewNavigation: UINavigationController!
+    private var trendViewNavigation: UINavigationController!
+    private var searchNavigation: UINavigationController!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,11 +33,16 @@ class TabBarController: UITabBarController {
         trendViewController = storyboardTrend.instantiateViewController(withIdentifier: "storyboardTrend") as? TrendViewController
         searchViewController = storyboardSearch.instantiateViewController(withIdentifier: "storyboardSearch") as? SearchViewController
 
-        pageViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
-        trendViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 2)
-        searchViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 3)
+        pageViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+        trendViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 2)
+        searchViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 3)
 
-        let vcs: [UIViewController] = [pageViewController, trendViewController, searchViewController]
+        // MARK: Navigation
+        pageViewNavigation = UINavigationController(rootViewController: pageViewController)
+        trendViewNavigation = UINavigationController(rootViewController: trendViewController)
+        searchNavigation = UINavigationController(rootViewController: searchViewController)
+
+        let vcs: [UIViewController] = [pageViewNavigation, trendViewNavigation, searchNavigation]
         self.setViewControllers(vcs, animated: true)
     }
 

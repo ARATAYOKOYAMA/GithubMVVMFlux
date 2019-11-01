@@ -28,6 +28,9 @@
 		DFC50A9823687A4C000F7640 /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A9723687A4C000F7640 /* TrendViewController.swift */; };
 		DFC50A9A23687A59000F7640 /* Trend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC50A9923687A59000F7640 /* Trend.storyboard */; };
 		DFC50A9D23687F3A000F7640 /* RepositoryFavoratePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A9C23687F3A000F7640 /* RepositoryFavoratePageViewController.swift */; };
+		DFC50AA3236C9AC5000F7640 /* GithubTrendingAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50AA2236C9AC5000F7640 /* GithubTrendingAPIRequest.swift */; };
+		DFC50AA5236C9B13000F7640 /* FetchTrendRepositoreis.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50AA4236C9B13000F7640 /* FetchTrendRepositoreis.swift */; };
+		DFC50AA7236C9BD6000F7640 /* TrendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50AA6236C9BD6000F7640 /* TrendRepository.swift */; };
 		DFC9E9E4235D505000F9EEDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E3235D505000F9EEDA /* AppDelegate.swift */; };
 		DFC9E9E6235D505000F9EEDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */; };
 		DFC9E9E8235D505000F9EEDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9E9E7235D505000F9EEDA /* ViewController.swift */; };
@@ -100,6 +103,9 @@
 		DFC50A9723687A4C000F7640 /* TrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewController.swift; sourceTree = "<group>"; };
 		DFC50A9923687A59000F7640 /* Trend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trend.storyboard; sourceTree = "<group>"; };
 		DFC50A9C23687F3A000F7640 /* RepositoryFavoratePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFavoratePageViewController.swift; sourceTree = "<group>"; };
+		DFC50AA2236C9AC5000F7640 /* GithubTrendingAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubTrendingAPIRequest.swift; sourceTree = "<group>"; };
+		DFC50AA4236C9B13000F7640 /* FetchTrendRepositoreis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTrendRepositoreis.swift; sourceTree = "<group>"; };
+		DFC50AA6236C9BD6000F7640 /* TrendRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendRepository.swift; sourceTree = "<group>"; };
 		DFC9E9E0235D505000F9EEDA /* GithubMVVMFlux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubMVVMFlux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC9E9E3235D505000F9EEDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFC9E9E5235D505000F9EEDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -272,6 +278,15 @@
 			path = "Repository+Favorate";
 			sourceTree = "<group>";
 		};
+		DFC50AA1236C9A50000F7640 /* GithubTrendingAPI */ = {
+			isa = PBXGroup;
+			children = (
+				DFC50AA2236C9AC5000F7640 /* GithubTrendingAPIRequest.swift */,
+				DFC50AA4236C9B13000F7640 /* FetchTrendRepositoreis.swift */,
+			);
+			path = GithubTrendingAPI;
+			sourceTree = "<group>";
+		};
 		DFC9E9D7235D505000F9EEDA = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +421,7 @@
 		DFC9EA31236173AD00F9EEDA /* API */ = {
 			isa = PBXGroup;
 			children = (
+				DFC50AA1236C9A50000F7640 /* GithubTrendingAPI */,
 				DFC9EA3A2361756C00F9EEDA /* model */,
 				DFC9EA32236173C600F9EEDA /* DecodableDataParser.swift */,
 				DFC9EA34236173F500F9EEDA /* GitHubAPIRequest.swift */,
@@ -420,6 +436,7 @@
 			children = (
 				DFC9EA3B2361757900F9EEDA /* Repository.swift */,
 				DFC50A6C2367098D000F7640 /* User.swift */,
+				DFC50AA6236C9BD6000F7640 /* TrendRepository.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -710,6 +727,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFC9EA392361755E00F9EEDA /* Session.swift in Sources */,
+				DFC50AA5236C9B13000F7640 /* FetchTrendRepositoreis.swift in Sources */,
 				DFC50A8823673647000F7640 /* TabBarController.swift in Sources */,
 				DFC9E9E8235D505000F9EEDA /* ViewController.swift in Sources */,
 				DFC50A7523670FDE000F7640 /* CheckAuthViewModel.swift in Sources */,
@@ -727,6 +745,7 @@
 				DFC50A8323673380000F7640 /* LoginViewController.swift in Sources */,
 				DFC9E9E6235D505000F9EEDA /* SceneDelegate.swift in Sources */,
 				DFC50A78236710A6000F7640 /* CheckAuthAction.swift in Sources */,
+				DFC50AA7236C9BD6000F7640 /* TrendRepository.swift in Sources */,
 				DFC50A8E23673E19000F7640 /* FavorateViewController.swift in Sources */,
 				DFC9EA432361784600F9EEDA /* TestActionCreator.swift in Sources */,
 				DFC9EA3E236175F500F9EEDA /* TestViewModel.swift in Sources */,
@@ -735,6 +754,7 @@
 				DFC9EA33236173C600F9EEDA /* DecodableDataParser.swift in Sources */,
 				DFC50A6D2367098D000F7640 /* User.swift in Sources */,
 				DFC9EA26235E04B600F9EEDA /* AssetsImages.swift in Sources */,
+				DFC50AA3236C9AC5000F7640 /* GithubTrendingAPIRequest.swift in Sources */,
 				DFC9EA4923647E4300F9EEDA /* TestAction.swift in Sources */,
 				DFC50A7223670F53000F7640 /* LoginViewModel.swift in Sources */,
 				DFC9EA1C235DFAE600F9EEDA /* StringsGen.swift in Sources */,

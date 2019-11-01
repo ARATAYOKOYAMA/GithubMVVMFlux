@@ -7,23 +7,37 @@
 //
 
 import UIKit
+import APIKit
+import RxSwift
+import RxCocoa
 
 class TrendViewController: UIViewController {
 
+    private let disposeBag = DisposeBag()
+
+    private var request = FetchTrendRepositoreis()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fetchRepository()
         // Do any additional setup after loading the view.
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func fetchRepository() {
+        print(request.baseURL)
+        print(request.path)
+        Session.rx_sendRequest(request: request)
+            .subscribe { [weak self] event in
+                switch event {
+                case .next(let repos):
+                    print(repos)
+                case .error(let error):
+                    print(error)
+                default:
+                    break
+                }
+            }
+        .disposed(by: disposeBag)
     }
-    */
 
 }
