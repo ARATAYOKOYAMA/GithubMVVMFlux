@@ -16,6 +16,10 @@
 		DF86EB3B236CE9C500F11537 /* TrendStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86EB3A236CE9C500F11537 /* TrendStore.swift */; };
 		DF86EB3E236CF55600F11537 /* TrendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86EB3C236CF55600F11537 /* TrendTableViewCell.swift */; };
 		DF86EB3F236CF55600F11537 /* TrendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF86EB3D236CF55600F11537 /* TrendTableViewCell.xib */; };
+		DF86EB41236CF89400F11537 /* UITableView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86EB40236CF89400F11537 /* UITableView+Register.swift */; };
+		DF86EB43236CF8A200F11537 /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86EB42236CF8A200F11537 /* UICollectionView+Register.swift */; };
+		DF86EB45236CF8AE00F11537 /* String+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86EB44236CF8AE00F11537 /* String+URL.swift */; };
+		DF86EB47236CF8C800F11537 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86EB46236CF8C800F11537 /* NSObject+ClassName.swift */; };
 		DFC50A6B2365F002000F7640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC50A692365F001000F7640 /* Main.storyboard */; };
 		DFC50A6D2367098D000F7640 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A6C2367098D000F7640 /* User.swift */; };
 		DFC50A7223670F53000F7640 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A7123670F53000F7640 /* LoginViewModel.swift */; };
@@ -97,6 +101,10 @@
 		DF86EB3A236CE9C500F11537 /* TrendStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendStore.swift; sourceTree = "<group>"; };
 		DF86EB3C236CF55600F11537 /* TrendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendTableViewCell.swift; sourceTree = "<group>"; };
 		DF86EB3D236CF55600F11537 /* TrendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendTableViewCell.xib; sourceTree = "<group>"; };
+		DF86EB40236CF89400F11537 /* UITableView+Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Register.swift"; sourceTree = "<group>"; };
+		DF86EB42236CF8A200F11537 /* UICollectionView+Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
+		DF86EB44236CF8AE00F11537 /* String+URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+URL.swift"; sourceTree = "<group>"; };
+		DF86EB46236CF8C800F11537 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
 		DFC50A6A2365F001000F7640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFC50A6C2367098D000F7640 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DFC50A7123670F53000F7640 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -244,6 +252,10 @@
 			isa = PBXGroup;
 			children = (
 				DFC50A8023672A86000F7640 /* ObservableType.filterNil.swift */,
+				DF86EB40236CF89400F11537 /* UITableView+Register.swift */,
+				DF86EB42236CF8A200F11537 /* UICollectionView+Register.swift */,
+				DF86EB44236CF8AE00F11537 /* String+URL.swift */,
+				DF86EB46236CF8C800F11537 /* NSObject+ClassName.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -767,16 +779,20 @@
 				DF86EB37236CE9A800F11537 /* TrendAction.swift in Sources */,
 				DFC9E9E4235D505000F9EEDA /* AppDelegate.swift in Sources */,
 				DFC9EA45236178F800F9EEDA /* TestStore.swift in Sources */,
+				DF86EB41236CF89400F11537 /* UITableView+Register.swift in Sources */,
 				DFC50A7A23671121000F7640 /* CheckAuthActionCreator.swift in Sources */,
 				DFC50A8B23673796000F7640 /* RepositoryViewController.swift in Sources */,
 				DFC9EA37236174CE00F9EEDA /* FetchRepositoryRequest.swift in Sources */,
 				DF86EB39236CE9B500F11537 /* TrendActionCreator.swift in Sources */,
+				DF86EB47236CF8C800F11537 /* NSObject+ClassName.swift in Sources */,
 				DFC50A8323673380000F7640 /* LoginViewController.swift in Sources */,
 				DF86EB3B236CE9C500F11537 /* TrendStore.swift in Sources */,
 				DFC9E9E6235D505000F9EEDA /* SceneDelegate.swift in Sources */,
+				DF86EB43236CF8A200F11537 /* UICollectionView+Register.swift in Sources */,
 				DFC50A78236710A6000F7640 /* CheckAuthAction.swift in Sources */,
 				DFC50AA7236C9BD6000F7640 /* TrendRepository.swift in Sources */,
 				DF86EB35236CE99200F11537 /* TrendViewModel.swift in Sources */,
+				DF86EB45236CF8AE00F11537 /* String+URL.swift in Sources */,
 				DFC50A8E23673E19000F7640 /* FavorateViewController.swift in Sources */,
 				DFC9EA432361784600F9EEDA /* TestActionCreator.swift in Sources */,
 				DFC9EA3E236175F500F9EEDA /* TestViewModel.swift in Sources */,

@@ -18,28 +18,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
-        
-        viewModel.user.subscribe({[weak self] user in
+
+        viewModel.user.subscribe({[weak self] _ in
             self?.pushTab(scene: scene)
         })
             .disposed(by: disposeBag)
-        
+
         viewModel.requireToken.subscribe({[weak self] _ in
             self?.pushTab(scene: scene)
         })
             .disposed(by: disposeBag)
-        
+
         viewModel.setupStream.onNext(())
         viewModel.setupStream.dispose()
-        
+
     }
-    
+
     private func pushMain(scene: UIWindowScene) {
         //　Storyboardを指定
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         // Viewcontrollerを指定
-        let initialViewController = storyboard.instantiateInitialViewController() as! ViewController
-        
+        let initialViewController = storyboard.instantiateInitialViewController() as? ViewController
+
         //　windowを生成
         window = UIWindow(windowScene: scene)
         // rootViewControllerに入れる
@@ -47,11 +47,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // 表示
         window?.makeKeyAndVisible()
     }
-    
+
     private func pushTab(scene: UIWindowScene) {
         // Viewcontrollerを指定
         let initialViewController = TabBarController()
-        
+
         //　windowを生成
         window = UIWindow(windowScene: scene)
         // rootViewControllerに入れる
