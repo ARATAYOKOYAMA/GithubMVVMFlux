@@ -1,6 +1,7 @@
 PODS:
   - APIKit (5.0.0)
   - AutoInsetter (1.8.0)
+  - ESTabBarController-swift (2.7)
   - Firebase/Analytics (6.11.0):
     - Firebase/Core
   - Firebase/Core (6.11.0):
@@ -86,6 +87,7 @@ PODS:
 
 DEPENDENCIES:
   - APIKit
+  - ESTabBarController-swift
   - Firebase/Analytics
   - RealmSwift
   - RxCocoa
@@ -98,6 +100,7 @@ SPEC REPOS:
   trunk:
     - APIKit
     - AutoInsetter
+    - ESTabBarController-swift
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -122,6 +125,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   APIKit: b27d79b022733b2f50e7a092e67c4cb9ea30f968
   AutoInsetter: 0b90ca74e36561c340129045a3722c51a0b15c58
+  ESTabBarController-swift: 4fb52ad03d94d0717ef97bc9eb09a5abfdded0a2
   Firebase: bc9cfc7a96c73268656d5aaab453ff1b4b530e0e
   FirebaseAnalytics: 0e3ecff2c5d86070f7d4325e21f1edabfbd558dc
   FirebaseCore: beeff42c07c30ea94702471d99db2089b594fbbd
@@ -143,6 +147,6 @@ SPEC CHECKSUMS:
   SwiftLint: 5553187048b900c91aa03552807681bb6b027846
   Tabman: 63eae331ae7a9388ae389b1808f1939269fcdece
 
-PODFILE CHECKSUM: 11f78053760224da4a00223b9ab2ce25b6c2c8d0
+PODFILE CHECKSUM: e1512be1f98937c70d2341c02ddd3f0dd9098af9
 
 COCOAPODS: 1.8.4
