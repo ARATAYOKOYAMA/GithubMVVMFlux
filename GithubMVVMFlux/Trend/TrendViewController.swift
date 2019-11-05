@@ -13,6 +13,10 @@ import RxCocoa
 
 final class TrendViewController: UIViewController {
 
+    enum UIparameters: CGFloat {
+        case trendTableViewCellHeight = 116
+    }
+
     @IBOutlet private weak var tableView: UITableView!
 
     private let viewModel = TrendViewModel()
@@ -28,6 +32,7 @@ final class TrendViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(cellType: TrendTableViewCell.self)
+        tableView.estimatedRowHeight = UIparameters.trendTableViewCellHeight.rawValue //セルの高さ
 
         // MARK: Output
         viewModel.repositories.subscribe(onNext: {
@@ -56,6 +61,10 @@ final class TrendViewController: UIViewController {
 }
 
 extension TrendViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UIparameters.trendTableViewCellHeight.rawValue
+    }
 
 }
 
