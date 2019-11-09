@@ -23,8 +23,7 @@ final class TrendTableViewCell: UITableViewCell {
     @IBOutlet private weak var languageLabel: UILabel!
     @IBOutlet private weak var staraLabel: UILabel!
     @IBOutlet private weak var forksLabel: UILabel!
-    
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -33,6 +32,15 @@ final class TrendTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+
+    func seetupCell(ropository: TrendRepositoryElement) {
+        authorLabel.text = ropository.author
+        nameLabel.text = ropository.name
+        descriptionLabel.text = ropository.description
+        languageLabel.text = ropository.language
+        staraLabel.text = String(ropository.stars)
+        forksLabel.text = String(ropository.forks)
     }
 
 }
