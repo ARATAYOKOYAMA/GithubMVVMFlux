@@ -10,9 +10,23 @@ import UIKit
 
 final class TrendTableViewCell: UITableViewCell {
 
+    @IBOutlet private weak var backView: UIView! {
+        didSet {
+            backView.backgroundColor = UIColor.white
+            backView.layer.borderColor = UIColor.black.cgColor
+            backView.layer.borderWidth = 1
+        }
+    }
+    @IBOutlet private weak var authorLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var languageLabel: UILabel!
+    @IBOutlet private weak var staraLabel: UILabel!
+    @IBOutlet private weak var forksLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

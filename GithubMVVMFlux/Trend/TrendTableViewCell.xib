@@ -18,7 +18,7 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scd-vc-5s0">
                         <rect key="frame" x="16" y="8" width="288" height="100"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XaK-jE-n9b">
                         <rect key="frame" x="24" y="16" width="214" height="84"/>
@@ -98,6 +98,15 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="authorLabel" destination="AMM-wP-obF" id="OUS-r0-zdh"/>
+                <outlet property="backView" destination="scd-vc-5s0" id="TqU-R0-41I"/>
+                <outlet property="descriptionLabel" destination="Wrh-4V-IO8" id="x4B-Os-Ctl"/>
+                <outlet property="forksLabel" destination="PfL-kK-Tos" id="zUJ-Ae-BVR"/>
+                <outlet property="languageLabel" destination="scM-hG-gP8" id="nTh-Rl-uhp"/>
+                <outlet property="nameLabel" destination="sdY-AF-5IK" id="N9Q-fz-JxU"/>
+                <outlet property="staraLabel" destination="RbT-q7-VTu" id="2vI-51-tGL"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="160.04464285714286"/>
         </tableViewCell>
     </objects>
