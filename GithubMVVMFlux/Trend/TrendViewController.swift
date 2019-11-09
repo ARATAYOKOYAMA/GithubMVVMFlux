@@ -26,6 +26,8 @@ final class TrendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.title = L10n.Navigation.Trend.title
+
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(cellType: TrendTableViewCell.self)

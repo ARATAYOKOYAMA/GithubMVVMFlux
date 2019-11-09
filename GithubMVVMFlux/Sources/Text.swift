@@ -12,24 +12,24 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
 
-  internal enum Navigation {
-    internal enum Search {
-      /// Search
-      internal static let title = L10n.tr("Text", "navigation.search.title")
+    internal enum Navigation {
+        internal enum Search {
+            /// Search
+            internal static let title = L10n.tr("Text", "navigation.search.title")
+        }
+        internal enum Trend {
+            /// Trending
+            internal static let title = L10n.tr("Text", "navigation.trend.title")
+        }
+        internal enum UserFavorate {
+            /// Your Favorate
+            internal static let title = L10n.tr("Text", "navigation.user_favorate.title")
+        }
+        internal enum UserRepositories {
+            /// Your Repositories
+            internal static let title = L10n.tr("Text", "navigation.user_repositories.title")
+        }
     }
-    internal enum Trend {
-      /// Trending
-      internal static let title = L10n.tr("Text", "navigation.trend.title")
-    }
-    internal enum UserFavorate {
-      /// Your Favorate
-      internal static let title = L10n.tr("Text", "navigation.user_favorate.title")
-    }
-    internal enum UserRepositories {
-      /// Your Repositories
-      internal static let title = L10n.tr("Text", "navigation.user_repositories.title")
-    }
-  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name
@@ -37,11 +37,11 @@ internal enum L10n {
 // MARK: - Implementation Details
 
 extension L10n {
-  private static func tr(_ table: String, _ key: String, _ args: CVarArg...) -> String {
-    // swiftlint:disable:next nslocalizedstring_key
-    let format = NSLocalizedString(key, tableName: table, bundle: Bundle(for: BundleToken.self), comment: "")
-    return String(format: format, locale: Locale.current, arguments: args)
-  }
+    private static func tr(_ table: String, _ key: String, _ args: CVarArg...) -> String {
+        // swiftlint:disable:next nslocalizedstring_key
+        let format = NSLocalizedString(key, tableName: table, bundle: Bundle(for: BundleToken.self), comment: "")
+        return String(format: format, locale: Locale.current, arguments: args)
+    }
 }
 
 private final class BundleToken {}
