@@ -64,7 +64,6 @@ extension TrendViewController: UITableViewDelegate {
         if let url = viewModel.repositories[indexPath.row].url.url {
             let safariVC = SFSafariViewController(url: url)
             present(safariVC, animated: true, completion: nil)
-            tableView.deselectRow(at: indexPath, animated: false)
         }
     }
 
