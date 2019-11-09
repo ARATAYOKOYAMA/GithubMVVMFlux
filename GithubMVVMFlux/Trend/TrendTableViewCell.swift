@@ -17,12 +17,43 @@ final class TrendTableViewCell: UITableViewCell {
             backView.layer.borderWidth = 1
         }
     }
-    @IBOutlet private weak var authorLabel: UILabel!
-    @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var descriptionLabel: UILabel!
-    @IBOutlet private weak var languageLabel: UILabel!
-    @IBOutlet private weak var staraLabel: UILabel!
-    @IBOutlet private weak var forksLabel: UILabel!
+    @IBOutlet private weak var authorLabel: UILabel! {
+        didSet {
+            authorLabel.font = authorLabel.font.withSize(20)
+            authorLabel.textColor = UIColor.blue
+        }
+    }
+    @IBOutlet private weak var nameLabel: UILabel! {
+        didSet {
+            nameLabel.font = nameLabel.font.withSize(20)
+            nameLabel.textColor = UIColor.blue
+        }
+    }
+    @IBOutlet private weak var descriptionLabel: UILabel! {
+        didSet {
+            descriptionLabel.numberOfLines = 0
+            descriptionLabel.font = descriptionLabel.font.withSize(16)
+            descriptionLabel.textColor = UIColor.gray
+        }
+    }
+    @IBOutlet private weak var languageLabel: UILabel! {
+        didSet {
+            languageLabel.font = languageLabel.font.withSize(12)
+            languageLabel.textColor = UIColor.gray
+        }
+    }
+    @IBOutlet private weak var staraLabel: UILabel! {
+        didSet {
+            staraLabel.font = staraLabel.font.withSize(12)
+            staraLabel.textColor = UIColor.gray
+        }
+    }
+    @IBOutlet private weak var forksLabel: UILabel! {
+        didSet {
+            forksLabel.font = forksLabel.font.withSize(12)
+            forksLabel.textColor = UIColor.gray
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

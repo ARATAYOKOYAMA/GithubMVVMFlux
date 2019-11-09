@@ -56,7 +56,7 @@ final class TrendViewController: UIViewController {
 extension TrendViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UIparameters.trendTableViewCellHeight.rawValue
+        return UITableView.automaticDimension
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
