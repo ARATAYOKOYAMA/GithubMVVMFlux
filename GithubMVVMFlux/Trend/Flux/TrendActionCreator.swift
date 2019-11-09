@@ -30,10 +30,8 @@ final class TrendActionCreator: Action {
             .subscribe { [weak self] event in
                 switch event {
                 case .next(let repos):
-                    print(repos)
                     self?.dispatcher.dispatch(TrendAction.fetchRepository(repos))
                 case .error(let error):
-                    print(error)
                     self?.dispatcher.dispatch(TrendAction.error(error))
                 default:
                     break

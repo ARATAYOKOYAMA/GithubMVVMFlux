@@ -16,11 +16,11 @@ final class TrendStore {
 
     private let disposeBag = DisposeBag()
 
-    var trendRepositories: Observable<TrendRepository> {
+    var trendRepositories: Observable<[TrendRepositoryElement]> {
         return _trendRepositoriesStream.asObservable()
     }
 
-    private let _trendRepositoriesStream = BehaviorRelay<TrendRepository>(value: [])
+    private let _trendRepositoriesStream = BehaviorRelay<[TrendRepositoryElement]>(value: [])
 
     required init(with dispatcher: Dispatcher = .shared) {
 

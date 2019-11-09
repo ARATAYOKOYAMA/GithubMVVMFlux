@@ -17,7 +17,9 @@ final class TrendViewModel {
     }
 
     // MARK: VC
-    private let _repositories = PublishRelay<TrendRepository>()
+    private let viewWillAppearStream = PublishSubject<Void>()
+    private let _repositories = BehaviorRelay<TrendRepository>(value: [])
+    private let _reloadData = PublishSubject<Void>()
 
     // MARK: Action
     private let trendActionCreator: TrendActionCreator?
@@ -25,15 +27,54 @@ final class TrendViewModel {
     // MARK: Store
     private let trendStore: TrendStore?
 
+    private let disposeBag = DisposeBag()
+
     init(with actionCreator: TrendActionCreator = .shared, store: TrendStore = .shared) {
         self.trendActionCreator = actionCreator
         self.trendStore = store
+
+        // MARK: Input
+        viewWillAppearStream.subscribe({[weak self] _ in
+            self?.createAction(type: .fetchRepository)
+        })
+            .disposed(by: disposeBag)
+
+        // MARK: Output
+        trendStore?.trendRepositories
+            .subscribe({[weak self] repositories in
+                guard let data = repositories.element else { return }
+                self?._repositories.accept(data)
+                self?._reloadData.onNext(())
+            })
+            .disposed(by: disposeBag)
+    }
+
+    private func createAction(type: ActionType) {
+        switch type {
+        case .fetchRepository:
+            self.trendActionCreator?.fetchRepository()
+        }
+    }
+}
+
+// MARK: Input
+extension TrendViewModel {
+    var viewWillAppear: AnyObserver<()> {
+        return viewWillAppearStream.asObserver()
     }
 }
 
 // MARK: Output
 extension TrendViewModel {
-    var repositories: Observable<TrendRepository> {
-        return _repositories.asObservable()
+    var reloadData: Observable<Void> {
+        return _reloadData.asObservable()
+    }
+
+    var repositories: TrendRepository {
+        return _repositories.value
+    }
+
+    var repositoriesCount: Int {
+        return _repositories.value.count
     }
 }

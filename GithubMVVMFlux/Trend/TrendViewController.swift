@@ -27,35 +27,28 @@ final class TrendViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchRepository()
 
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(cellType: TrendTableViewCell.self)
         tableView.estimatedRowHeight = UIparameters.trendTableViewCellHeight.rawValue //セルの高さ
 
-        // MARK: Output
-        viewModel.repositories.subscribe(onNext: {
-            print($0)
+        // MARK: Input
+        viewModel.reloadData.subscribe({[weak self] _ in
+            self?.reloadData()
         })
+            .disposed(by: disposeBag)
+
+        // MARK: Output
+        rx.sentMessage(#selector(viewWillAppear(_:)))
+            .take(1)
+            .map { _ in }
+            .bind(to: viewModel.viewWillAppear)
             .disposed(by: disposeBag)
     }
 
-    func fetchRepository() {
-        print(request.baseURL)
-        print(request.path)
-        Session.rx_sendRequest(request: request)
-            .subscribe { [weak self] event in
-                switch event {
-                case .next(let repos):
-                    print(repos)
-                case .error(let error):
-                    print(error)
-                default:
-                    break
-                }
-            }
-        .disposed(by: disposeBag)
+    private func reloadData() {
+        tableView.reloadData()
     }
 
 }
@@ -71,7 +64,7 @@ extension TrendViewController: UITableViewDelegate {
 extension TrendViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return viewModel.repositoriesCount
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
