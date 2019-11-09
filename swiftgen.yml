@@ -1,10 +1,10 @@
 input_dir: GithubMVVMFlux/Resources
 output_dir: GithubMVVMFlux/Sources
 strings:
-  inputs: Strings/Localizable.strings
+  inputs: Strings/Text.strings
   outputs:
     templateName: structured-swift4
-    output: StringsGen.swift
+    output: Text.swift
 colors:
   inputs: Colors/colors.xml
   outputs:
