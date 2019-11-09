@@ -30,6 +30,15 @@ internal enum L10n {
             internal static let title = L10n.tr("Text", "navigation.user_repositories.title")
         }
     }
+
+    internal enum TableCell {
+        internal enum Trend {
+            /// %@ / %@
+            internal static func title(_ p1: String, _ p2: String) -> String {
+                return L10n.tr("Text", "table_cell.trend.title", p1, p2)
+            }
+        }
+    }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name

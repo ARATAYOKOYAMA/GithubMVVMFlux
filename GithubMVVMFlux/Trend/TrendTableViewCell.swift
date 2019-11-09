@@ -17,16 +17,11 @@ final class TrendTableViewCell: UITableViewCell {
             backView.layer.borderWidth = 1
         }
     }
-    @IBOutlet private weak var authorLabel: UILabel! {
+    @IBOutlet private weak var titleLabel: UILabel! {
         didSet {
-            authorLabel.font = authorLabel.font.withSize(20)
-            authorLabel.textColor = UIColor.blue
-        }
-    }
-    @IBOutlet private weak var nameLabel: UILabel! {
-        didSet {
-            nameLabel.font = nameLabel.font.withSize(20)
-            nameLabel.textColor = UIColor.blue
+            titleLabel.numberOfLines = 0
+            titleLabel.font = titleLabel.font.withSize(20)
+            titleLabel.textColor = UIColor.blue
         }
     }
     @IBOutlet private weak var descriptionLabel: UILabel! {
@@ -66,8 +61,7 @@ final class TrendTableViewCell: UITableViewCell {
     }
 
     func seetupCell(ropository: TrendRepositoryElement) {
-        authorLabel.text = ropository.author
-        nameLabel.text = ropository.name
+        titleLabel.text = L10n.TableCell.Trend.title(ropository.author, ropository.name)
         descriptionLabel.text = ropository.description
         languageLabel.text = ropository.language
         staraLabel.text = String(ropository.stars)
