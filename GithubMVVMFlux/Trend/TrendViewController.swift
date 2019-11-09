@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 import RxSwift
 import RxCocoa
 
@@ -54,6 +55,17 @@ extension TrendViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIparameters.trendTableViewCellHeight.rawValue
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        // MARK: 外に出せないかな・・？？
+        if let url = viewModel.repositories[indexPath.row].url.url {
+            let safariVC = SFSafariViewController(url: url)
+            present(safariVC, animated: true, completion: nil)
+            tableView.deselectRow(at: indexPath, animated: false)
+        }
     }
 
 }
