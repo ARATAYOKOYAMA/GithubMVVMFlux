@@ -22,8 +22,6 @@ final class TrendViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
 
-    private var request = FetchTrendRepositoreis()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
