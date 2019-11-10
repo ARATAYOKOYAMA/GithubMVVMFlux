@@ -23,6 +23,8 @@
 		DFAA8DAE2376E5B7004264E1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA8DAD2376E5B7004264E1 /* UIColor.swift */; };
 		DFAA8DB02376EE5E004264E1 /* Text.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFAA8DAF2376EE5E004264E1 /* Text.strings */; };
 		DFAA8DB22376EFE2004264E1 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA8DB12376EFE2004264E1 /* Text.swift */; };
+		DFAA8DB623786369004264E1 /* SearchRepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA8DB523786369004264E1 /* SearchRepositoriesModel.swift */; };
+		DFAA8DB8237863D2004264E1 /* SearchRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA8DB7237863D2004264E1 /* SearchRepositories.swift */; };
 		DFC50A6B2365F002000F7640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC50A692365F001000F7640 /* Main.storyboard */; };
 		DFC50A6D2367098D000F7640 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A6C2367098D000F7640 /* User.swift */; };
 		DFC50A7223670F53000F7640 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A7123670F53000F7640 /* LoginViewModel.swift */; };
@@ -109,6 +111,8 @@
 		DFAA8DAD2376E5B7004264E1 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		DFAA8DAF2376EE5E004264E1 /* Text.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Text.strings; sourceTree = "<group>"; };
 		DFAA8DB12376EFE2004264E1 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		DFAA8DB523786369004264E1 /* SearchRepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesModel.swift; sourceTree = "<group>"; };
+		DFAA8DB7237863D2004264E1 /* SearchRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositories.swift; sourceTree = "<group>"; };
 		DFC50A6A2365F001000F7640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFC50A6C2367098D000F7640 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DFC50A7123670F53000F7640 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -214,6 +218,21 @@
 			path = Flux;
 			sourceTree = "<group>";
 		};
+		DFAA8DB32378618F004264E1 /* Flux */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flux;
+			sourceTree = "<group>";
+		};
+		DFAA8DB423786236004264E1 /* SearchRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				DFAA8DB7237863D2004264E1 /* SearchRepositories.swift */,
+			);
+			path = SearchRepositories;
+			sourceTree = "<group>";
+		};
 		DFC50A6E23670F1C000F7640 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +311,7 @@
 		DFC50A91236879E0000F7640 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				DFAA8DB32378618F004264E1 /* Flux */,
 				DFC50A9423687A12000F7640 /* SearchViewController.swift */,
 				DFC50A9223687A01000F7640 /* Search.storyboard */,
 			);
@@ -462,6 +482,7 @@
 		DFC9EA31236173AD00F9EEDA /* API */ = {
 			isa = PBXGroup;
 			children = (
+				DFAA8DB423786236004264E1 /* SearchRepositories */,
 				DFC50AA1236C9A50000F7640 /* GithubTrendingAPI */,
 				DFC9EA3A2361756C00F9EEDA /* model */,
 				DFC9EA32236173C600F9EEDA /* DecodableDataParser.swift */,
@@ -475,6 +496,7 @@
 		DFC9EA3A2361756C00F9EEDA /* model */ = {
 			isa = PBXGroup;
 			children = (
+				DFAA8DB523786369004264E1 /* SearchRepositoriesModel.swift */,
 				DFC9EA3B2361757900F9EEDA /* Repository.swift */,
 				DFC50A6C2367098D000F7640 /* User.swift */,
 				DFC50AA6236C9BD6000F7640 /* TrendRepository.swift */,
@@ -798,6 +820,7 @@
 				DF86EB45236CF8AE00F11537 /* String+URL.swift in Sources */,
 				DFC50A8E23673E19000F7640 /* FavorateViewController.swift in Sources */,
 				DFAA8DAE2376E5B7004264E1 /* UIColor.swift in Sources */,
+				DFAA8DB623786369004264E1 /* SearchRepositoriesModel.swift in Sources */,
 				DFC9EA432361784600F9EEDA /* TestActionCreator.swift in Sources */,
 				DFAA8DB22376EFE2004264E1 /* Text.swift in Sources */,
 				DFC9EA3E236175F500F9EEDA /* TestViewModel.swift in Sources */,
@@ -806,6 +829,7 @@
 				DFC9EA33236173C600F9EEDA /* DecodableDataParser.swift in Sources */,
 				DFC50A6D2367098D000F7640 /* User.swift in Sources */,
 				DFC9EA26235E04B600F9EEDA /* AssetsImages.swift in Sources */,
+				DFAA8DB8237863D2004264E1 /* SearchRepositories.swift in Sources */,
 				DFC50AA3236C9AC5000F7640 /* GithubTrendingAPIRequest.swift in Sources */,
 				DFC9EA4923647E4300F9EEDA /* TestAction.swift in Sources */,
 				DFC50A7223670F53000F7640 /* LoginViewModel.swift in Sources */,
