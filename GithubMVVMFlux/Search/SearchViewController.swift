@@ -7,23 +7,55 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class SearchViewController: UIViewController {
+
+    @IBOutlet private weak var searchBar: UISearchBar! {
+        didSet {
+            searchBar.delegate = self
+        }
+    }
+    @IBOutlet private weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            //            tableView.dataSource = self
+        }
+    }
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        searchBar.rx.text
+            // MARK: 初期化時に空文字が流れるのでそれはスキップ
+            .skip(1)
+            // MARK: 最後のストリームから1秒後に流す
+            .debounce(.seconds(1), scheduler: MainScheduler.instance)
+            // MARK: 流れるストリームはoptionalなので
+            .filterNil()
+            .subscribe(onNext: { text in
+                print(text)
+            })
+            .disposed(by: disposeBag)
     }
 
-    /*
-     // MARK: - Navigation
+}
 
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+extension SearchViewController: UISearchBarDelegate {
 
 }
+
+extension SearchViewController: UITableViewDelegate {
+
+}
+
+//extension SearchViewController: UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 3
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//    }
+//}

@@ -37,6 +37,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MpY-xZ-2Fe"/>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="Z9R-mD-4Ng" id="0wa-GI-Xtt"/>
+                        <outlet property="tableView" destination="129-8g-D0R" id="Td1-BO-KI0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZuV-b6-jE8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
