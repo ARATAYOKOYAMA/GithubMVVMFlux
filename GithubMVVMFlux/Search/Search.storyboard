@@ -15,21 +15,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qut-JP-WdJ">
-                                <rect key="frame" x="186" y="438" width="52" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Z9R-mD-4Ng">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="129-8g-D0R">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Z9R-mD-4Ng" firstAttribute="leading" secondItem="MpY-xZ-2Fe" secondAttribute="leading" id="6OW-HW-TWk"/>
+                            <constraint firstItem="129-8g-D0R" firstAttribute="top" secondItem="Z9R-mD-4Ng" secondAttribute="bottom" id="Aff-sp-zg7"/>
+                            <constraint firstItem="Z9R-mD-4Ng" firstAttribute="top" secondItem="MpY-xZ-2Fe" secondAttribute="top" id="Dh4-XS-92W"/>
+                            <constraint firstItem="129-8g-D0R" firstAttribute="leading" secondItem="MpY-xZ-2Fe" secondAttribute="leading" id="IrN-vc-odI"/>
+                            <constraint firstItem="Z9R-mD-4Ng" firstAttribute="trailing" secondItem="MpY-xZ-2Fe" secondAttribute="trailing" id="MiY-Ik-XMu"/>
+                            <constraint firstItem="129-8g-D0R" firstAttribute="top" secondItem="Z9R-mD-4Ng" secondAttribute="bottom" id="aVu-JM-XnF"/>
+                            <constraint firstItem="129-8g-D0R" firstAttribute="bottom" secondItem="MpY-xZ-2Fe" secondAttribute="bottom" id="hPC-4T-ILk"/>
+                            <constraint firstItem="129-8g-D0R" firstAttribute="trailing" secondItem="MpY-xZ-2Fe" secondAttribute="trailing" id="slI-n9-fSg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MpY-xZ-2Fe"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZuV-b6-jE8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-68" y="100"/>
+            <point key="canvasLocation" x="-68.115942028985515" y="99.776785714285708"/>
         </scene>
     </scenes>
 </document>
