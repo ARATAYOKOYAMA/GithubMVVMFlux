@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import APIKit
 import RxSwift
 import RxCocoa
 
@@ -35,16 +36,37 @@ class SearchViewController: UIViewController {
             .debounce(.seconds(1), scheduler: MainScheduler.instance)
             // MARK: 流れるストリームはoptionalなので
             .filterNil()
-            .subscribe(onNext: { text in
+            .subscribe(onNext: { [weak self] text in
                 print(text)
+                //FIXME: とりあえず
+                self?.fetchRepository(userName: text)
             })
             .disposed(by: disposeBag)
+    }
+    
+    //FIXME: とりあえず
+    private var request = SearchRepositories()
+
+    func fetchRepository(userName: String) {
+        request.searchText = userName
+        Session.rx_sendRequest(request: request)
+            .subscribe { [weak self] event in
+                switch event {
+                case .next(let repos):
+                    print(repos)
+                case .error(let error):
+                    print(error)
+                default:
+                    break
+                }
+            }
+        .disposed(by: disposeBag)
     }
 
 }
 
 extension SearchViewController: UISearchBarDelegate {
-    
+
     // 検索キータップ時に呼び出されるメソッド.
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()

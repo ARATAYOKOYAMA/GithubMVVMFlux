@@ -29,6 +29,7 @@ struct SearchRepositories: GitHubRequest {
 
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
         let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         guard let data = object as? Data else {
             throw ResponseError.unexpectedObject(object)
         }

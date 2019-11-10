@@ -18,19 +18,19 @@ struct SearchRepositoriesModel: Codable {
 // MARK: - Item
 struct Item: Codable {
     let id: Int
-    let nodeID, name, fullName: String
+    let nodeId, name, fullName: String
     let owner: Owner
-    let itemPrivate: Bool
-    let htmlURL: String
-    let itemDescription: String
+    let `private`: Bool
+    let htmlUrl: String
+    let description: String
     let fork: Bool
     let url: String
-    let createdAt, updatedAt, pushedAt: Date
-    let homepage: String
+    let createdAt, updatedAt, pushedAt: String
+    let homepage: String?
     let size, stargazersCount, watchersCount: Int
     let language: String
+    let defaultBranch: String
     let forksCount, openIssuesCount: Int
-    let masterBranch, defaultBranch: String
     let score: Double
 }
 
@@ -38,9 +38,9 @@ struct Item: Codable {
 struct Owner: Codable {
     let login: String
     let id: Int
-    let nodeID: String
-    let avatarURL: String
-    let gravatarID: String
-    let url, receivedEventsURL: String
+    let nodeId: String
+    let avatarUrl: String
+    let gravatarId: String
+    let url, receivedEventsUrl: String
     let type: String
 }
