@@ -13,7 +13,7 @@ import RxCocoa
 
 final class SearchActionCreator: Action {
 
-    static let shared = TrendActionCreator()
+    static let shared = SearchActionCreator()
 
     private var dispatcher: Dispatcher
 
@@ -32,7 +32,6 @@ final class SearchActionCreator: Action {
                 guard let wself = self else { return }
                 switch event {
                 case .next(let repos):
-                    print(repos)
                     wself.dispatcher.dispatch(SearchAction.searchRepository(repos))
                 case .error(let error):
                     print(error)

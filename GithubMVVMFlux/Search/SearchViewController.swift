@@ -24,11 +24,13 @@ class SearchViewController: UIViewController {
             //            tableView.dataSource = self
         }
     }
+    private let viewModel = SearchViewModel()
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // MARK: Output
         searchBar.rx.text
             // MARK: 初期化時に空文字が流れるのでそれはスキップ
             .skip(1)
@@ -36,33 +38,10 @@ class SearchViewController: UIViewController {
             .debounce(.seconds(1), scheduler: MainScheduler.instance)
             // MARK: 流れるストリームはoptionalなので
             .filterNil()
-            .subscribe(onNext: { [weak self] text in
-                print(text)
-                //FIXME: とりあえず
-                self?.fetchRepository(userName: text)
-            })
+            .bind(to: viewModel.incrementalSearchBar)
             .disposed(by: disposeBag)
     }
-
-    //FIXME: とりあえず
-    private var request = SearchRepositories()
-
-    func fetchRepository(userName: String) {
-        request.searchText = userName
-        Session.rx_sendRequest(request: request)
-            .subscribe { [weak self] event in
-                switch event {
-                case .next(let repos):
-                    print(repos)
-                case .error(let error):
-                    print(error)
-                default:
-                    break
-                }
-            }
-        .disposed(by: disposeBag)
-    }
-
+    
 }
 
 extension SearchViewController: UISearchBarDelegate {
