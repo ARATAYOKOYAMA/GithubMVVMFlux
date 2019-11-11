@@ -28,6 +28,7 @@
 		DFAA8DBA23791AA1004264E1 /* SearchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA8DB923791AA1004264E1 /* SearchAction.swift */; };
 		DFAA8DBC23791ABB004264E1 /* SearchActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA8DBB23791ABB004264E1 /* SearchActionCreator.swift */; };
 		DFAA8DBE23791ACA004264E1 /* SearchStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA8DBD23791ACA004264E1 /* SearchStore.swift */; };
+		DFAA8DC023791EE0004264E1 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA8DBF23791EE0004264E1 /* SearchViewModel.swift */; };
 		DFC50A6B2365F002000F7640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC50A692365F001000F7640 /* Main.storyboard */; };
 		DFC50A6D2367098D000F7640 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A6C2367098D000F7640 /* User.swift */; };
 		DFC50A7223670F53000F7640 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A7123670F53000F7640 /* LoginViewModel.swift */; };
@@ -119,6 +120,7 @@
 		DFAA8DB923791AA1004264E1 /* SearchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAction.swift; sourceTree = "<group>"; };
 		DFAA8DBB23791ABB004264E1 /* SearchActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchActionCreator.swift; sourceTree = "<group>"; };
 		DFAA8DBD23791ACA004264E1 /* SearchStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStore.swift; sourceTree = "<group>"; };
+		DFAA8DBF23791EE0004264E1 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		DFC50A6A2365F001000F7640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFC50A6C2367098D000F7640 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DFC50A7123670F53000F7640 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				DFAA8DB32378618F004264E1 /* Flux */,
+				DFAA8DBF23791EE0004264E1 /* SearchViewModel.swift */,
 				DFC50A9423687A12000F7640 /* SearchViewController.swift */,
 				DFC50A9223687A01000F7640 /* Search.storyboard */,
 			);
@@ -845,6 +848,7 @@
 				DFC50AA3236C9AC5000F7640 /* GithubTrendingAPIRequest.swift in Sources */,
 				DFC9EA4923647E4300F9EEDA /* TestAction.swift in Sources */,
 				DFC50A7223670F53000F7640 /* LoginViewModel.swift in Sources */,
+				DFAA8DC023791EE0004264E1 /* SearchViewModel.swift in Sources */,
 				DF86EB3E236CF55600F11537 /* TrendTableViewCell.swift in Sources */,
 				DFC50A9D23687F3A000F7640 /* RepositoryFavoratePageViewController.swift in Sources */,
 				DFC50A9523687A12000F7640 /* SearchViewController.swift in Sources */,
