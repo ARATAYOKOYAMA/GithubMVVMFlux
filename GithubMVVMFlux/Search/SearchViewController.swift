@@ -11,7 +11,7 @@ import APIKit
 import RxSwift
 import RxCocoa
 
-class SearchViewController: UIViewController {
+final class SearchViewController: UIViewController {
 
     @IBOutlet private weak var searchBar: UISearchBar! {
         didSet {
@@ -41,7 +41,7 @@ class SearchViewController: UIViewController {
             .bind(to: viewModel.incrementalSearchBar)
             .disposed(by: disposeBag)
     }
-    
+
 }
 
 extension SearchViewController: UISearchBarDelegate {

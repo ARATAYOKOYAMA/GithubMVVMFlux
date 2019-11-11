@@ -22,13 +22,13 @@ struct Item: Codable {
     let owner: Owner
     let `private`: Bool
     let htmlUrl: String
-    let description: String
+    let description: String?
     let fork: Bool
     let url: String
     let createdAt, updatedAt, pushedAt: String
     let homepage: String?
     let size, stargazersCount, watchersCount: Int
-    let language: String
+    let language: String?
     let defaultBranch: String
     let forksCount, openIssuesCount: Int
     let score: Double

@@ -51,6 +51,7 @@ final class SearchViewModel {
     private func createAction(type: ActionType) {
         switch type {
         case .searchRepository(let text):
+            guard text != "" else { return }
             self.searchActionCreator?.searchRepository(userName: text)
         }
     }
@@ -74,7 +75,8 @@ extension SearchViewModel {
     }
 
     var repositoriesCount: Int {
-        guard let count = _repositories.value?.items.count else {   return 0
+        guard let count = _repositories.value?.items.count else {
+            return 0
         }
         return count
     }
