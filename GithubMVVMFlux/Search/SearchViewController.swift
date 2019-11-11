@@ -43,7 +43,7 @@ class SearchViewController: UIViewController {
             })
             .disposed(by: disposeBag)
     }
-    
+
     //FIXME: とりあえず
     private var request = SearchRepositories()
 

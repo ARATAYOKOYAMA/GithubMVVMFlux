@@ -25,6 +25,9 @@
 		DFAA8DB22376EFE2004264E1 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA8DB12376EFE2004264E1 /* Text.swift */; };
 		DFAA8DB623786369004264E1 /* SearchRepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA8DB523786369004264E1 /* SearchRepositoriesModel.swift */; };
 		DFAA8DB8237863D2004264E1 /* SearchRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA8DB7237863D2004264E1 /* SearchRepositories.swift */; };
+		DFAA8DBA23791AA1004264E1 /* SearchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA8DB923791AA1004264E1 /* SearchAction.swift */; };
+		DFAA8DBC23791ABB004264E1 /* SearchActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA8DBB23791ABB004264E1 /* SearchActionCreator.swift */; };
+		DFAA8DBE23791ACA004264E1 /* SearchStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA8DBD23791ACA004264E1 /* SearchStore.swift */; };
 		DFC50A6B2365F002000F7640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC50A692365F001000F7640 /* Main.storyboard */; };
 		DFC50A6D2367098D000F7640 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A6C2367098D000F7640 /* User.swift */; };
 		DFC50A7223670F53000F7640 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC50A7123670F53000F7640 /* LoginViewModel.swift */; };
@@ -113,6 +116,9 @@
 		DFAA8DB12376EFE2004264E1 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		DFAA8DB523786369004264E1 /* SearchRepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesModel.swift; sourceTree = "<group>"; };
 		DFAA8DB7237863D2004264E1 /* SearchRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositories.swift; sourceTree = "<group>"; };
+		DFAA8DB923791AA1004264E1 /* SearchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAction.swift; sourceTree = "<group>"; };
+		DFAA8DBB23791ABB004264E1 /* SearchActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchActionCreator.swift; sourceTree = "<group>"; };
+		DFAA8DBD23791ACA004264E1 /* SearchStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStore.swift; sourceTree = "<group>"; };
 		DFC50A6A2365F001000F7640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFC50A6C2367098D000F7640 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DFC50A7123670F53000F7640 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -221,6 +227,9 @@
 		DFAA8DB32378618F004264E1 /* Flux */ = {
 			isa = PBXGroup;
 			children = (
+				DFAA8DB923791AA1004264E1 /* SearchAction.swift */,
+				DFAA8DBB23791ABB004264E1 /* SearchActionCreator.swift */,
+				DFAA8DBD23791ACA004264E1 /* SearchStore.swift */,
 			);
 			path = Flux;
 			sourceTree = "<group>";
@@ -803,6 +812,7 @@
 				DFC9EA4723647CCC00F9EEDA /* Action.swift in Sources */,
 				DF86EB37236CE9A800F11537 /* TrendAction.swift in Sources */,
 				DFC9E9E4235D505000F9EEDA /* AppDelegate.swift in Sources */,
+				DFAA8DBE23791ACA004264E1 /* SearchStore.swift in Sources */,
 				DFC9EA45236178F800F9EEDA /* TestStore.swift in Sources */,
 				DF86EB41236CF89400F11537 /* UITableView+Register.swift in Sources */,
 				DFC50A7A23671121000F7640 /* CheckAuthActionCreator.swift in Sources */,
@@ -811,6 +821,7 @@
 				DF86EB39236CE9B500F11537 /* TrendActionCreator.swift in Sources */,
 				DF86EB47236CF8C800F11537 /* NSObject+ClassName.swift in Sources */,
 				DFC50A8323673380000F7640 /* LoginViewController.swift in Sources */,
+				DFAA8DBA23791AA1004264E1 /* SearchAction.swift in Sources */,
 				DF86EB3B236CE9C500F11537 /* TrendStore.swift in Sources */,
 				DFC9E9E6235D505000F9EEDA /* SceneDelegate.swift in Sources */,
 				DF86EB43236CF8A200F11537 /* UICollectionView+Register.swift in Sources */,
@@ -829,6 +840,7 @@
 				DFC9EA33236173C600F9EEDA /* DecodableDataParser.swift in Sources */,
 				DFC50A6D2367098D000F7640 /* User.swift in Sources */,
 				DFC9EA26235E04B600F9EEDA /* AssetsImages.swift in Sources */,
+				DFAA8DBC23791ABB004264E1 /* SearchActionCreator.swift in Sources */,
 				DFAA8DB8237863D2004264E1 /* SearchRepositories.swift in Sources */,
 				DFC50AA3236C9AC5000F7640 /* GithubTrendingAPIRequest.swift in Sources */,
 				DFC9EA4923647E4300F9EEDA /* TestAction.swift in Sources */,
