@@ -36,6 +36,8 @@ final class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.title = L10n.Navigation.Search.title
+
         // MARK: Input
         viewModel.reloadData.subscribe({[weak self] _ in
             self?.reloadData()
