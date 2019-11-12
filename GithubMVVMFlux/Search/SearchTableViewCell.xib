@@ -90,6 +90,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backView" destination="elt-OB-0dA" id="Kyj-V4-h8t"/>
+                <outlet property="descriptionLabel" destination="Bin-GL-Hul" id="1sh-Vm-LqX"/>
+                <outlet property="languageLabel" destination="7rT-sy-yeh" id="6xq-IJ-b1x"/>
+                <outlet property="staraLabel" destination="uhP-Yr-seE" id="06a-4W-T7K"/>
+                <outlet property="titleLabel" destination="XOP-eL-CnD" id="fzB-sb-LFR"/>
+                <outlet property="updatedLabel" destination="Utj-Uj-Gcd" id="mkH-tX-hN9"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="147.99107142857142"/>
         </tableViewCell>
     </objects>
