@@ -61,4 +61,12 @@ final class SearchTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func seetupCell(ropository: Item) {
+        titleLabel.text = ropository.fullName
+        descriptionLabel.text = ropository.description
+        languageLabel.text = ropository.language
+        staraLabel.text = String(ropository.stargazersCount)
+        updatedLabel.text = ropository.updatedAt
+    }
+    
 }
