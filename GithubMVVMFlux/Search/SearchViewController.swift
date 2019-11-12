@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import APIKit
+import SafariServices
 import RxSwift
 import RxCocoa
 
@@ -80,10 +80,10 @@ extension SearchViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
 
         // MARK: 外に出せないかな・・？？
-        //        if let url = viewModel.repositories[indexPath.row].url.url {
-        //            let safariVC = SFSafariViewController(url: url)
-        //            present(safariVC, animated: true, completion: nil)
-        //        }
+        if let url = viewModel.repositories?[indexPath.row].htmlUrl.url {
+            let safariVC = SFSafariViewController(url: url)
+            present(safariVC, animated: true, completion: nil)
+        }
     }
 
 }
