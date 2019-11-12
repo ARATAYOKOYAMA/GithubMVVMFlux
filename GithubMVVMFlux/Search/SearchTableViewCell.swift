@@ -28,7 +28,7 @@ final class SearchTableViewCell: UITableViewCell {
         didSet {
             descriptionLabel.numberOfLines = 0
             descriptionLabel.font = descriptionLabel.font.withSize(16)
-            descriptionLabel.textColor = UIColor.gray
+            descriptionLabel.textColor = UIColor.black
         }
     }
     @IBOutlet private weak var languageLabel: UILabel! {
