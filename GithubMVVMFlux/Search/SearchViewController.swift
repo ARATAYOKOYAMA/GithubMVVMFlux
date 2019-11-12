@@ -13,6 +13,10 @@ import RxCocoa
 
 final class SearchViewController: UIViewController {
 
+    enum UIparameters: CGFloat {
+        case trendTableViewCellHeight = 132
+    }
+
     @IBOutlet private weak var searchBar: UISearchBar! {
         didSet {
             searchBar.delegate = self
@@ -21,7 +25,9 @@ final class SearchViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
-            //            tableView.dataSource = self
+            tableView.dataSource = self
+            tableView.register(cellType: SearchTableViewCell.self)
+            tableView.estimatedRowHeight = UIparameters.trendTableViewCellHeight.rawValue //セルの高さ
         }
     }
     private let viewModel = SearchViewModel()
@@ -29,6 +35,12 @@ final class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // MARK: Input
+        viewModel.reloadData.subscribe({[weak self] _ in
+            self?.reloadData()
+        })
+            .disposed(by: disposeBag)
 
         // MARK: Output
         searchBar.rx.text
@@ -40,6 +52,10 @@ final class SearchViewController: UIViewController {
             .filterNil()
             .bind(to: viewModel.incrementalSearchBar)
             .disposed(by: disposeBag)
+    }
+
+    private func reloadData() {
+        tableView.reloadData()
     }
 
 }
@@ -56,13 +72,30 @@ extension SearchViewController: UISearchBarDelegate {
 
 extension SearchViewController: UITableViewDelegate {
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        // MARK: 外に出せないかな・・？？
+        //        if let url = viewModel.repositories[indexPath.row].url.url {
+        //            let safariVC = SFSafariViewController(url: url)
+        //            present(safariVC, animated: true, completion: nil)
+        //        }
+    }
+
 }
 
-//extension SearchViewController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 3
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//    }
-//}
+extension SearchViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.repositoriesCount
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(with: SearchTableViewCell.self, for: indexPath)
+        cell.seetupCell(ropository: viewModel.repositories?[indexPath.row])
+        return cell
+    }
+}

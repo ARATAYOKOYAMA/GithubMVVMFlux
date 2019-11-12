@@ -70,8 +70,9 @@ extension SearchViewModel {
         return _reloadData.asObservable()
     }
 
-    var repositories: SearchRepositoriesModel? {
-        return _repositories.value
+    //FIXME: オプショナルを返すのはおかしいはず
+    var repositories: [Item]? {
+        return _repositories.value?.items
     }
 
     var repositoriesCount: Int {
