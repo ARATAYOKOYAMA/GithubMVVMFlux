@@ -32,7 +32,7 @@ final class TrendTableViewCell: UITableViewCell {
             descriptionLabel.numberOfLines = 0
             descriptionLabel.font = descriptionLabel.font.withSize(16)
             descriptionLabel.textColor = UIColor.gray
-            descriptionLabel.text = "samplesamplesamplesamplesamplesamplesample"
+            //            descriptionLabel.text = "samplesamplesamplesamplesamplesamplesample"
             descriptionLabel.isSkeletonable = true
             descriptionLabel.showAnimatedGradientSkeleton()
         }
