@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 final class TrendTableViewCell: UITableViewCell {
 
@@ -22,6 +23,8 @@ final class TrendTableViewCell: UITableViewCell {
             titleLabel.numberOfLines = 0
             titleLabel.font = titleLabel.font.withSize(20)
             titleLabel.textColor = UIColor.blue
+            titleLabel.isSkeletonable = true
+            titleLabel.showAnimatedGradientSkeleton()
         }
     }
     @IBOutlet private weak var descriptionLabel: UILabel! {
@@ -29,24 +32,33 @@ final class TrendTableViewCell: UITableViewCell {
             descriptionLabel.numberOfLines = 0
             descriptionLabel.font = descriptionLabel.font.withSize(16)
             descriptionLabel.textColor = UIColor.gray
+            descriptionLabel.text = "samplesamplesamplesamplesamplesamplesample"
+            descriptionLabel.isSkeletonable = true
+            descriptionLabel.showAnimatedGradientSkeleton()
         }
     }
     @IBOutlet private weak var languageLabel: UILabel! {
         didSet {
             languageLabel.font = languageLabel.font.withSize(12)
             languageLabel.textColor = UIColor.gray
+            languageLabel.isSkeletonable = true
+            languageLabel.showAnimatedGradientSkeleton()
         }
     }
     @IBOutlet private weak var staraLabel: UILabel! {
         didSet {
             staraLabel.font = staraLabel.font.withSize(12)
             staraLabel.textColor = UIColor.gray
+            staraLabel.isSkeletonable = true
+            staraLabel.showAnimatedGradientSkeleton()
         }
     }
     @IBOutlet private weak var forksLabel: UILabel! {
         didSet {
             forksLabel.font = forksLabel.font.withSize(12)
             forksLabel.textColor = UIColor.gray
+            forksLabel.isSkeletonable = true
+            forksLabel.showAnimatedGradientSkeleton()
         }
     }
 
@@ -61,6 +73,13 @@ final class TrendTableViewCell: UITableViewCell {
     }
 
     func seetupCell(ropository: TrendRepositoryElement) {
+
+        titleLabel.hideSkeleton()
+        descriptionLabel.hideSkeleton()
+        languageLabel.hideSkeleton()
+        staraLabel.hideSkeleton()
+        forksLabel.hideSkeleton()
+
         titleLabel.text = L10n.TableCell.Trend.title(ropository.author, ropository.name)
         descriptionLabel.text = ropository.description
         languageLabel.text = ropository.language

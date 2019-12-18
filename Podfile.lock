@@ -78,6 +78,7 @@ PODS:
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
+  - SkeletonView (1.8.2)
   - SwiftGen (6.1.0)
   - SwiftLint (0.35.0)
   - Tabman (2.6.3):
@@ -90,6 +91,7 @@ DEPENDENCIES:
   - RealmSwift
   - RxCocoa
   - RxSwift
+  - SkeletonView
   - SwiftGen
   - SwiftLint
   - Tabman (~> 2.6)
@@ -115,6 +117,7 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SkeletonView
     - SwiftGen
     - SwiftLint
     - Tabman
@@ -139,10 +142,11 @@ SPEC CHECKSUMS:
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SkeletonView: bb27c39857e5492136f02ee8a3aa78de55d12ecd
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 5553187048b900c91aa03552807681bb6b027846
   Tabman: 63eae331ae7a9388ae389b1808f1939269fcdece
 
-PODFILE CHECKSUM: 11f78053760224da4a00223b9ab2ce25b6c2c8d0
+PODFILE CHECKSUM: f9556af07eee21a83742a1190cf17d517ae6c02d
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.8.3

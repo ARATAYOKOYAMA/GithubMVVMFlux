@@ -20,6 +20,7 @@ final class TrendViewModel {
     private let viewWillAppearStream = PublishSubject<Void>()
     private let _repositories = BehaviorRelay<TrendRepository>(value: [])
     private let _reloadData = PublishSubject<Void>()
+    var hideSkeletonFlag = true
 
     // MARK: Action
     private let trendActionCreator: TrendActionCreator?
@@ -36,15 +37,18 @@ final class TrendViewModel {
         // MARK: Input
         viewWillAppearStream.subscribe({[weak self] _ in
             self?.createAction(type: .fetchRepository)
+            self?.hideSkeletonFlag = true
         })
             .disposed(by: disposeBag)
 
         // MARK: Output
         trendStore?.trendRepositories
+            .skip(1)
             .subscribe({[weak self] repositories in
                 guard let data = repositories.element else { return }
                 self?._repositories.accept(data)
                 self?._reloadData.onNext(())
+                self?.hideSkeletonFlag = false
             })
             .disposed(by: disposeBag)
     }

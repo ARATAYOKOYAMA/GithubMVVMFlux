@@ -14,6 +14,7 @@ target 'GithubMVVMFlux' do
   pod 'APIKit'
   pod 'SwiftLint'
   pod 'SwiftGen'
+  pod "SkeletonView"
 
   target 'GithubMVVMFluxTests' do
     inherit! :search_paths

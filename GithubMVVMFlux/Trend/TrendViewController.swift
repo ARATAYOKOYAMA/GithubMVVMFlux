@@ -74,12 +74,18 @@ extension TrendViewController: UITableViewDelegate {
 extension TrendViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if viewModel.hideSkeletonFlag {
+            return 10
+        }
+
         return viewModel.repositoriesCount
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: TrendTableViewCell.self, for: indexPath)
-        cell.seetupCell(ropository: viewModel.repositories[indexPath.row])
+        if !viewModel.hideSkeletonFlag {
+            cell.seetupCell(ropository: viewModel.repositories[indexPath.row])
+        }
         return cell
     }
 
