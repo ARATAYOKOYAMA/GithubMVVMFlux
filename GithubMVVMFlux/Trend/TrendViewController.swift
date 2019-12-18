@@ -74,10 +74,6 @@ extension TrendViewController: UITableViewDelegate {
 extension TrendViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if viewModel.hideSkeletonFlag {
-            return 10
-        }
-
         return viewModel.repositoriesCount
     }
 

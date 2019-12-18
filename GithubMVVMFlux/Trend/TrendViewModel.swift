@@ -79,6 +79,9 @@ extension TrendViewModel {
     }
 
     var repositoriesCount: Int {
+        if hideSkeletonFlag {
+            return 10
+        }
         return _repositories.value.count
     }
 
