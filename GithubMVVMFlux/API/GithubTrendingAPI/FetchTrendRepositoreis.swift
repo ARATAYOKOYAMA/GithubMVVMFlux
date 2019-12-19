@@ -25,14 +25,6 @@ struct FetchTrendRepositoreis: GithubTrendingAPIRequest {
         return ["language": "swift", "since": "weekly"]
     }
 
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
-        let decoder = JSONDecoder()
-        guard let data = object as? Data else {
-            throw ResponseError.unexpectedObject(object)
-        }
-        return try decoder.decode(Response.self, from: data)
-    }
-
     // RxSwift の Observable を実装したインターフェース
     public func asObservable() -> Observable<Response> {
         return Session.rx_sendRequest(request: self)

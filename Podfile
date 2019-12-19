@@ -15,6 +15,7 @@ target 'GithubMVVMFlux' do
   pod 'SwiftLint'
   pod 'SwiftGen'
   pod "SkeletonView"
+  pod 'netfox'
 
   target 'GithubMVVMFluxTests' do
     inherit! :search_paths

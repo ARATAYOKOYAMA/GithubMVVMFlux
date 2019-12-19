@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import RealmSwift
+import netfox
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if (oldSchemaVersion < 1) {}
             })
         Realm.Configuration.defaultConfiguration = config
+
+        // 通信ログ出力ライブラリを起動
+        NFX.sharedInstance().start()
+        // MARK: これがないとbodyが表示されない
+        let configuration = URLSessionConfiguration.default
+        configuration.protocolClasses?.insert(NFXProtocol.self, at: 0)
+
         return true
     }
 
@@ -39,6 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+        // 通信ログ出力ライブラリを停止
+        NFX.sharedInstance().stop()
     }
 
 }

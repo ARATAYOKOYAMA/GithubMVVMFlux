@@ -66,6 +66,7 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - netfox (1.18.0)
   - Pageboy (3.5.0)
   - Realm (3.20.0):
     - Realm/Headers (= 3.20.0)
@@ -88,6 +89,7 @@ PODS:
 DEPENDENCIES:
   - APIKit
   - Firebase/Analytics
+  - netfox
   - RealmSwift
   - RxCocoa
   - RxSwift
@@ -111,6 +113,7 @@ SPEC REPOS:
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - nanopb
+    - netfox
     - Pageboy
     - Realm
     - RealmSwift
@@ -136,6 +139,7 @@ SPEC CHECKSUMS:
   GoogleDataTransportCCTSupport: f6ab1962e9dc05ab1fb938b795e5b310209edeec
   GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  netfox: 95b3583c28e4a3376cc5a647d48e8e26f5b16d58
   Pageboy: 3794c578aae5fcce06e90b3ed4a0ad6b807d75bb
   Realm: 8b2ca5bc6479a91f379b6b42b5922e396cd5ba5a
   RealmSwift: 1949ef26a279e1845bd51d591b9103adfcd121df
@@ -147,6 +151,6 @@ SPEC CHECKSUMS:
   SwiftLint: 5553187048b900c91aa03552807681bb6b027846
   Tabman: 63eae331ae7a9388ae389b1808f1939269fcdece
 
-PODFILE CHECKSUM: f9556af07eee21a83742a1190cf17d517ae6c02d
+PODFILE CHECKSUM: ac6523999ca7c2e54a4b32abee90183b200e8b0f
 
 COCOAPODS: 1.8.3
