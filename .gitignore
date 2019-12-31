@@ -40,7 +40,7 @@ playground.xcworkspace
 ## Gems
 .bundle
 vendor
-Gemfile.lock
+# Gemfile.lock
 
 # Swift Package Manager
 #
