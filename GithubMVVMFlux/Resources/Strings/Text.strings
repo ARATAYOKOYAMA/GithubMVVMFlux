@@ -2,5 +2,6 @@
 "navigation.user_favorate.title" = "Your Favorate";
 "navigation.trend.title" = "Trending";
 "navigation.search.title" = "Search";
+"navigation.search.test" = "test";
 
 "table_cell.trend.title" = "%@ / %@";

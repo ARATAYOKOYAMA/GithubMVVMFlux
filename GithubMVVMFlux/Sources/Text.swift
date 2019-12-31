@@ -14,6 +14,8 @@ internal enum L10n {
 
   internal enum Navigation {
     internal enum Search {
+      /// test
+      internal static let test = L10n.tr("Text", "navigation.search.test")
       /// Search
       internal static let title = L10n.tr("Text", "navigation.search.title")
     }
