@@ -1,0 +1,37 @@
+name: Swift
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_11.2.1.app/Contents/Developer
+    steps:
+    - uses: actions/checkout@v1
+    - name: Cache Gems
+      uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gem-
+    - name: Cache Pods
+      uses: actions/cache@v1
+      with:
+        path: Pods
+        key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-pods-
+    - name: Pod install
+      run: bundle exec pod install
+    - name: Xcode build
+      run: set -o pipefail &&
+        xcodebuild
+        -sdk iphonesimulator
+        -configuration Debug
+        -workspace GithubMVVMFlux.xcworkspace
+        -scheme GithubMVVMFlux
+        build
+        | bundle exec xcpretty
